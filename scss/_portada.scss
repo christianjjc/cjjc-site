@@ -1,0 +1,181 @@
+@mixin absolute-centrado($transY, $transX) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) translateY($transY) translateX($transX);
+}
+
+@mixin contenedor-1 {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin texto-grande($color, $fs) {
+  text-align: center;
+  font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  color: $color;
+  font-size: $fs;
+  line-height: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  //font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  //font-weight: 300;
+  //font-style: normal;
+}
+
+.contenedor-pizarra {
+  @include contenedor-1;
+  padding-top: 20px;
+  height: 100vh;
+}
+
+.contenedor-menu {
+  @include contenedor-1;
+  @include absolute-centrado(30%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombre {
+  @include texto-grande(#ffffff, 5rem);
+}
+
+.nombre-opcion {
+  @include texto-grande(#ffffff, 2.5rem);
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.btn-cierra {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.btn-cierra.a {
+  background: rgb(243, 79, 79);
+}
+
+.btn-cierra.b {
+  background: orange;
+}
+.btn-cierra.c {
+  background: rgb(48, 150, 48);
+}
+
+.pizarra-codigo--estilos {
+  background: rgb(6, 4, 26);
+  background: -moz-linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgba(15, 12, 67, 1) 50%, rgba(8, 6, 37, 1) 100%);
+  background: -webkit-linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgb(15, 12, 67) 50%, rgba(6, 4, 26, 1) 100%);
+  background: linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgba(15, 12, 67, 1) 50%, rgba(6, 4, 26, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080625",endColorstr="#080625",GradientType=1);
+  /* background: #080625; */
+  color: white;
+  border-radius: 0.3em;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
+  @include absolute-centrado(-50%, 0);
+}
+
+.height-auto {
+  height: auto;
+  width: 90%;
+}
+
+@mixin latido-1 {
+  position: fixed;
+  animation: fadeInOut 2s infinite;
+  /*animation-iteration-count: 3;  Repetir 5 veces */
+  animation-fill-mode: forwards;
+}
+
+#precarga {
+  @include latido-1;
+  @include absolute-centrado(-50%, 0);
+  z-index: 99999;
+}
+
+.latido-1 {
+  @include latido-1;
+}
+
+.oculto {
+  display: none;
+}
+
+.blurreado {
+  filter: blur(3px) brightness(25%);
+  transition: filter 0.5s ease;
+}
+
+.no-blurreado {
+  filter: blur(0px) brightness(100%);
+  transition: filter 0.5s ease;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.typed {
+  position: relative;
+  display: inline-block;
+}
+
+.typed:after {
+  content: "|";
+  position: absolute;
+  opacity: 1;
+  animation: cursor-blink 0.3s infinite;
+}
+
+.codigo {
+  /* background-color: #f1f1f1; */
+  font-family: monospace;
+  font-size: $glb-fs-small;
+  line-height: $glb-fs-small-lh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dollar {
+  color: yellow;
+}
+
+.comented {
+  //color: #767676;
+  color: #00a756;
+}
+
+.flecha {
+  color: yellow;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

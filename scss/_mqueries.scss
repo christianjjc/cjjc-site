@@ -1,0 +1,51 @@
+/* Pantallas mini a sm */
+@media screen and (max-width: 576px) {
+}
+
+/* Pantallas sm a md */
+@media screen and (min-width: 578px) {
+}
+
+/* Pantallas xl */
+@media screen and (min-width: 768px) {
+  .codigo {
+    font-size: $glb-fs;
+    line-height: $glb-fs-lh;
+  }
+  /*   .nombre {
+    font-size: 3.5rem;
+  } */
+}
+
+/* Pantallas xxl */
+@media screen and (min-width: 992px) {
+}
+
+/* Pantallas xxl */
+@media screen and (min-width: 1240px) {
+  .height-auto {
+    height: auto;
+    width: 690px;
+  }
+
+  /* .nombre {
+    font-size: 4.5rem;
+  } */
+
+  @keyframes rsWidht {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 690px;
+    }
+  }
+}
+
+/* Pantallas xxl */
+@media screen and (min-width: 1500px) {
+}
+
+/* Pantallas xxxl */
+@media screen and (min-width: 1750px) {
+}

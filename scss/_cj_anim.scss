@@ -1,0 +1,33 @@
+.pizarra-animate--height {
+  animation-name: rsWidht, rsHeight;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rsWidht {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes rsHeight {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 0px;
+  }
+  100% {
+    height: 94px;
+  }
+}
+
+.pizarra-animate--height:nth-child(1) {
+  animation-duration: 0.5s;
+}
+
+.pizarra-animate--height:nth-child(2) {
+  animation-duration: 1s;
+}

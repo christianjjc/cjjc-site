@@ -1,0 +1,17 @@
+{
+  "name": "portafolio-cjjc",
+  "version": "1.0.0",
+  "description": "Portafolio personal para alojar trabajos realizados.",
+  "main": "main.js",
+  "scripts": {
+    "build": "sass scss/custom.scss css/main.css",
+    "watch": "nodemon -e scss -x \"npm run build\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "sass": "^1.63.6"
+  }
+}
