@@ -92,7 +92,7 @@
 }
 
 @mixin latido-1 {
-  position: fixed;
+  position: absolute;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
@@ -162,10 +162,6 @@
 .comented {
   //color: #767676;
   color: #00a756;
-}
-
-.flecha {
-  color: yellow;
 }
 
 @keyframes cursor-blink {

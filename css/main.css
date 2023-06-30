@@ -362,7 +362,7 @@ body {
 }
 
 #precarga {
-  position: fixed;
+  position: absolute;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
@@ -375,7 +375,7 @@ body {
 }
 
 .latido-1 {
-  position: fixed;
+  position: absolute;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
@@ -435,10 +435,6 @@ body {
   color: #00a756;
 }
 
-.flecha {
-  color: yellow;
-}
-
 @keyframes cursor-blink {
   0% {
     opacity: 1;
@@ -450,6 +446,12 @@ body {
     opacity: 1;
   }
 }
+.section_2 {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
 /* Pantallas mini a sm */
 /* Pantallas sm a md */
 /* Pantallas xl */
