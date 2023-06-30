@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
+  //margin-right: -50%;
   transform: translate(-50%, -50%) translateY($transY) translateX($transX);
 }
 
@@ -28,12 +28,12 @@
 .contenedor-pizarra {
   @include contenedor-1;
   padding-top: 20px;
-  height: 100vh;
+  height: 100%;
 }
 
 .contenedor-menu {
   @include contenedor-1;
-  @include absolute-centrado(30%, 0);
+  @include absolute-centrado(0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,12 +78,11 @@
   background: -webkit-linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgb(15, 12, 67) 50%, rgba(6, 4, 26, 1) 100%);
   background: linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgba(15, 12, 67, 1) 50%, rgba(6, 4, 26, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080625",endColorstr="#080625",GradientType=1);
-  /* background: #080625; */
   color: white;
   border-radius: 0.3em;
-  padding: 20px;
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
-  @include absolute-centrado(-50%, 0);
+  padding: 20px;
+  @include absolute-centrado(0, 0);
 }
 
 .height-auto {
@@ -101,7 +100,7 @@
 #precarga {
   @include latido-1;
   @include absolute-centrado(-50%, 0);
-  z-index: 99999;
+  z-index: 100;
 }
 
 .latido-1 {

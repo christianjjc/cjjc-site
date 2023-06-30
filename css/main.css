@@ -39,7 +39,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -99;
+  z-index: 0;
 }
 
 .circles li {
@@ -266,8 +266,65 @@ body {
   font-size: 0.9rem;
   line-height: 1.5rem;
   font-weight: 300;
-  background-color: #3d3f53;
+}
+
+main {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+section {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.div-relativo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+#section-1 {
+  z-index: 99;
+  background-color: #141e30;
   background-image: linear-gradient(to right, #141e30, #243b55);
+  top: 0px;
+  left: 0px;
+}
+
+#section-2 {
+  z-index: 98;
+  background-color: #2d0e0e;
+  background-image: linear-gradient(to right, #2d0e0e, #581c1c);
+  top: 0px;
+  left: 0px;
+}
+
+#section-3 {
+  z-index: 97;
+  background-color: #484815;
+  background-image: linear-gradient(to right, #484815, #92922b);
+  top: 0px;
+  left: 0px;
+}
+
+#section-4 {
+  z-index: 96;
+  background-color: #133513;
+  background-image: linear-gradient(to right, #133513, #297229);
+  top: 0px;
+  left: 0px;
+}
+
+#section-5 {
+  z-index: 95;
+  background-color: #341235;
+  background-image: linear-gradient(to right, #341235, #732775);
+  top: 0px;
+  left: 0px;
 }
 
 .contenedor-pizarra {
@@ -275,7 +332,7 @@ body {
   position: relative;
   margin: 0 auto;
   padding-top: 20px;
-  height: 100vh;
+  height: 100%;
 }
 
 .contenedor-menu {
@@ -285,8 +342,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) translateY(30%) translateX(0);
+  transform: translate(-50%, -50%) translateY(0) translateX(0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,16 +400,14 @@ body {
   background: -webkit-linear-gradient(340deg, rgb(6, 4, 26) 0%, rgb(15, 12, 67) 50%, rgb(6, 4, 26) 100%);
   background: linear-gradient(340deg, rgb(6, 4, 26) 0%, rgb(15, 12, 67) 50%, rgb(6, 4, 26) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080625",endColorstr="#080625",GradientType=1);
-  /* background: #080625; */
   color: white;
   border-radius: 0.3em;
-  padding: 20px;
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
+  padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) translateY(-50%) translateX(0);
+  transform: translate(-50%, -50%) translateY(0) translateX(0);
 }
 
 .height-auto {
@@ -369,9 +423,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%) translateY(-50%) translateX(0);
-  z-index: 99999;
+  z-index: 100;
 }
 
 .latido-1 {
@@ -446,12 +499,6 @@ body {
     opacity: 1;
   }
 }
-.section_2 {
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.2);
-  color: white;
-}
-
 /* Pantallas mini a sm */
 /* Pantallas sm a md */
 /* Pantallas xl */
