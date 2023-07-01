@@ -8,7 +8,7 @@
     "watch": "nodemon -e scss -x \"npm run build\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Christian Jiménez C.",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.22",

@@ -2,14 +2,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
+  //margin-right: -50%;
   transform: translate(-50%, -50%) translateY($transY) translateX($transX);
-}
-
-@mixin contenedor-1 {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
 }
 
 @mixin texto-grande($color, $fs) {
@@ -25,18 +19,14 @@
   //font-style: normal;
 }
 
-.contenedor-pizarra {
-  @include contenedor-1;
-  padding-top: 20px;
-  height: 100vh;
-}
-
 .contenedor-menu {
-  @include contenedor-1;
-  @include absolute-centrado(30%, 0);
+  @include absolute-centrado(30vh, 0);
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 86;
 }
 
 .nombre {
@@ -78,12 +68,11 @@
   background: -webkit-linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgb(15, 12, 67) 50%, rgba(6, 4, 26, 1) 100%);
   background: linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgba(15, 12, 67, 1) 50%, rgba(6, 4, 26, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080625",endColorstr="#080625",GradientType=1);
-  /* background: #080625; */
   color: white;
   border-radius: 0.3em;
-  padding: 20px;
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
-  @include absolute-centrado(-50%, 0);
+  padding: 20px;
+  @include absolute-centrado(0, 0);
 }
 
 .height-auto {
@@ -92,7 +81,7 @@
 }
 
 @mixin latido-1 {
-  position: fixed;
+  //position: absolute;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
@@ -101,7 +90,7 @@
 #precarga {
   @include latido-1;
   @include absolute-centrado(-50%, 0);
-  z-index: 99999;
+  z-index: 100;
 }
 
 .latido-1 {
@@ -164,10 +153,6 @@
   color: #00a756;
 }
 
-.flecha {
-  color: yellow;
-}
-
 @keyframes cursor-blink {
   0% {
     opacity: 1;
@@ -178,4 +163,12 @@
   100% {
     opacity: 1;
   }
+}
+
+.contenedor-relativo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 250px;
+  justify-content: space-between;
 }

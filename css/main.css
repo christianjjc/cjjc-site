@@ -39,7 +39,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -99;
+  z-index: 0;
 }
 
 .circles li {
@@ -140,10 +140,18 @@
     border-radius: 50%;
   }
 }
-.menu {
+/* .menu {
   position: relative;
   width: 300px;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.menu {
+  position: relative;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,7 +182,7 @@
 .menu li {
   position: absolute;
   list-style: none;
-  left: 10px;
+  left: -40px;
   transform: rotate(calc(90deg * var(--i))) translateX(40px);
   transform-origin: 140px;
   visibility: hidden;
@@ -266,30 +274,87 @@ body {
   font-size: 0.9rem;
   line-height: 1.5rem;
   font-weight: 300;
-  background-color: #3d3f53;
-  background-image: linear-gradient(to right, #141e30, #243b55);
+  overflow: hidden;
 }
 
-.contenedor-pizarra {
-  width: 100%;
+main {
   position: relative;
-  margin: 0 auto;
-  padding-top: 20px;
+  top: 0px;
+  left: 0px;
   height: 100vh;
+  width: 100vw;
 }
 
-.contenedor-menu {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
+section {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) translateY(30%) translateX(0);
+  height: 100%;
+  width: 100%;
+}
+
+.section-flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.div-relativo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+#section-1 {
+  z-index: 81;
+  background-color: #141e30;
+  background-image: linear-gradient(to right, #141e30, #243b55);
+  top: 0px;
+  left: 0px;
+}
+
+#section-2 {
+  z-index: 82;
+  background-color: #2d0e0e;
+  background-image: linear-gradient(to right, #2d0e0e, #581c1c);
+  top: 100vh;
+  left: 0px;
+}
+
+#section-3 {
+  z-index: 83;
+  background-color: #484815;
+  background-image: linear-gradient(to right, #484815, #92922b);
+  top: 0px;
+  left: -100vw;
+}
+
+#section-4 {
+  z-index: 84;
+  background-color: #133513;
+  background-image: linear-gradient(to right, #133513, #297229);
+  top: 0px;
+  left: 100vw;
+}
+
+#section-5 {
+  z-index: 85;
+  background-color: #341235;
+  background-image: linear-gradient(to right, #341235, #732775);
+  top: -100vh;
+  left: 0px;
+}
+
+.contenedor-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(30vh) translateX(0);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 86;
 }
 
 .nombre {
@@ -344,16 +409,14 @@ body {
   background: -webkit-linear-gradient(340deg, rgb(6, 4, 26) 0%, rgb(15, 12, 67) 50%, rgb(6, 4, 26) 100%);
   background: linear-gradient(340deg, rgb(6, 4, 26) 0%, rgb(15, 12, 67) 50%, rgb(6, 4, 26) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080625",endColorstr="#080625",GradientType=1);
-  /* background: #080625; */
   color: white;
   border-radius: 0.3em;
-  padding: 20px;
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
+  padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) translateY(-50%) translateX(0);
+  transform: translate(-50%, -50%) translateY(0) translateX(0);
 }
 
 .height-auto {
@@ -362,20 +425,17 @@ body {
 }
 
 #precarga {
-  position: fixed;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%) translateY(-50%) translateX(0);
-  z-index: 99999;
+  z-index: 100;
 }
 
 .latido-1 {
-  position: fixed;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
@@ -435,10 +495,6 @@ body {
   color: #00a756;
 }
 
-.flecha {
-  color: yellow;
-}
-
 @keyframes cursor-blink {
   0% {
     opacity: 1;
@@ -450,6 +506,14 @@ body {
     opacity: 1;
   }
 }
+.contenedor-relativo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 250px;
+  justify-content: space-between;
+}
+
 /* Pantallas mini a sm */
 /* Pantallas sm a md */
 /* Pantallas xl */

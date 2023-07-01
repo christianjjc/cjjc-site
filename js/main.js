@@ -15,7 +15,8 @@ const escribirTexto = (texto, idEtiqueta, mls) => {
     if (i == cantCar) {
       clearInterval(intervaloCaracter);
       nuevomensaje = nuevomensaje.replace("/**", `<span class="comented">/**`, "*/", `*/</span>`);
-      nuevomensaje = nuevomensaje.replace("-->", `<span class="flecha">--></span>`);
+      //nuevomensaje = nuevomensaje.replace("-->", `<span class="dollar">--></span>`);
+      nuevomensaje = nuevomensaje.replace("Full Stack Javascript Developer", `<span class="dollar">Full Stack Javascript Developer</span>`);
       textoElemento.innerHTML = nuevomensaje;
       i = 0;
       textoescribir = "";
@@ -46,17 +47,17 @@ const frasesEscritas = (cadaXsegundos, texto1, idEtiquetaNueva, mls, cursor = fa
 function cargaMensajes() {
   const texto1 = `$ ¡Hola! Bienvenido a mi Web Site. `;
   const texto2 = `$ Mi nombre es Christian Jiménez.`;
-  const texto3 = `$ Soy Desarrollador Web Full Stack y también soy Diseñador Gráfico.`;
-  const texto4 = `$`;
-  const texto5 = `$ /** --------------------- */`;
-  const texto6 = `$ A continuación, te invito a conocer más sobre mi y mis proyectos.`;
+  const texto3 = `$ /** --------------------- */`;
+  //const texto4 = `$`;
+  const texto4 = `$ Me desempeño como Full Stack Javascript Developer.`;
+  const texto5 = `$ A continuación, te invito a conocer más sobre mi y mis proyectos.`;
   let summartiempo = 0;
   frasesEscritas(summartiempo, texto1, "typed-1", 40);
   frasesEscritas((summartiempo += 2.5), texto2, "typed-2", 40, true, "typed-1");
-  frasesEscritas((summartiempo += 3), texto3, "typed-3", 40, true, "typed-2");
-  frasesEscritas((summartiempo += 4), texto4, "typed-4", 1, true, "typed-3");
-  frasesEscritas((summartiempo += 0.3), texto5, "typed-5", 1, true, "typed-4");
-  frasesEscritas((summartiempo += 0.8), texto6, "typed-6", 40, true, "typed-5");
+  frasesEscritas((summartiempo += 2.5), texto3, "typed-3", 40, true, "typed-2");
+  frasesEscritas((summartiempo += 2.5), texto4, "typed-4", 40, true, "typed-3");
+  frasesEscritas((summartiempo += 3), texto5, "typed-5", 40, true, "typed-4");
+  //  frasesEscritas((summartiempo += 3), texto6, "typed-6", 40, true, "typed-5");
   setTimeout(() => {
     const contenedorMenu = document.querySelector(".contenedor-menu");
     contenedorMenu.classList.toggle("oculto");
@@ -105,6 +106,25 @@ const botonElegido = () => {
       activeLink(item.id);
       textoMostrar.innerHTML = item.getAttribute("text-value");
     });
+    item.addEventListener("click", () => {
+      const idSeccion = item.getAttribute("seccion");
+      switch (idSeccion) {
+        case "section-1":
+          break;
+        case "section-2":
+          showSegundo();
+          break;
+        case "section-3":
+          showTercero();
+          break;
+        case "section-4":
+          showCuarto();
+          break;
+        case "section-5":
+          showQuinto();
+          break;
+      }
+    });
   });
 };
 
@@ -124,3 +144,111 @@ const menuCircular = () => {
   });
   botonElegido();
 };
+
+/*
+// Create a timeline
+const tl1 = gsap
+  .timeline({
+    delay: 5,
+    defaults: {
+      duration: 2,
+      ease: "power2.inOut",
+    },
+    smoothChildTiming: true,
+    //autoRemoveChildren: true,
+  })
+  .to(".setcion-1", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-2")
+  .to(".setcion-2", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-3")
+  .to(".setcion-3", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-4")
+  .to(".setcion-4", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-5");
+  */
+
+function showSegundo() {
+  gsap
+    .timeline()
+    .to(`#section-5`, {
+      top: "-100vh",
+      left: "0",
+      duration: 0.1,
+      ease: "power1.inOut",
+    })
+    .to(`#section-4`, {
+      top: "0",
+      left: "100vw",
+      duration: 0.1,
+      ease: "power1.inOut",
+    })
+    .to(`#section-3`, {
+      top: "0",
+      left: "-100vw",
+      duration: 0.1,
+      ease: "power1.inOut",
+    })
+    .to(`#section-2`, {
+      top: "0",
+      left: "0",
+      duration: 2,
+      ease: "back.inOut(1)",
+    });
+}
+
+function showTercero() {
+  gsap
+    .timeline()
+    .to(`#section-5`, {
+      top: "-100vh",
+      left: "0",
+      duration: 0.1,
+      ease: "power1.inOut",
+    })
+    .to(`#section-4`, {
+      top: "0",
+      left: "100vw",
+      duration: 0.1,
+      ease: "power1.inOut",
+    })
+    .to(`#section-3`, {
+      top: "0",
+      left: "0",
+      duration: 2,
+      ease: "back.inOut(1)",
+    });
+}
+
+function showCuarto() {
+  gsap
+    .timeline()
+    .to(`#section-5`, {
+      top: "-100vh",
+      left: "0",
+      duration: 0.1,
+      ease: "power1.inOut",
+    })
+    .to(`#section-4`, {
+      top: "0",
+      left: "0",
+      duration: 2,
+      ease: "back.inOut(1)",
+    });
+}
+
+function showQuinto() {
+  gsap.timeline().to(`#section-5`, {
+    top: "0",
+    left: "0",
+    duration: 2,
+    ease: "back.inOut(1)",
+  });
+}
