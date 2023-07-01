@@ -49,19 +49,19 @@ section {
   z-index: 1;
 }
 
-#section-1 {
+#section-2 {
   z-index: 81;
-  background-color: #141e30;
-  background-image: linear-gradient(to right, #141e30, #243b55);
+  background-color: #2d0e0e;
+  background-image: linear-gradient(to right, #2d0e0e, #581c1c);
   top: 0px;
   left: 0px;
 }
 
-#section-2 {
+#section-1 {
   z-index: 82;
-  background-color: #2d0e0e;
-  background-image: linear-gradient(to right, #2d0e0e, #581c1c);
-  top: 100vh;
+  background-color: #141e30;
+  background-image: linear-gradient(to right, #141e30, #243b55);
+  top: 0px;
   left: 0px;
 }
 

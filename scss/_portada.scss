@@ -19,16 +19,6 @@
   //font-style: normal;
 }
 
-.contenedor-menu {
-  @include absolute-centrado(30vh, 0);
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 86;
-}
-
 .nombre {
   @include texto-grande(#ffffff, 5rem);
 }
@@ -101,6 +91,9 @@
 .oculto {
   display: none;
 }
+.flex {
+  display: flex;
+}
 
 .blurreado {
   filter: blur(3px) brightness(25%);
@@ -143,6 +136,20 @@
   line-height: $glb-fs-small-lh;
   display: flex;
   flex-direction: column;
+}
+
+.botones-menu {
+  opacity: 0;
+  display: none;
+  margin-top: 30px;
+  font-family: monospace;
+  font-size: $glb-fs-small !important;
+  line-height: $glb-fs-small-lh !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .dollar {
