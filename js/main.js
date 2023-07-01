@@ -106,6 +106,27 @@ const botonElegido = () => {
       activeLink(item.id);
       textoMostrar.innerHTML = item.getAttribute("text-value");
     });
+    item.addEventListener("click", () => {
+      const idSeccion = item.getAttribute("seccion");
+      switch (idSeccion) {
+        case "section-1":
+          break;
+        case "section-2":
+          showSegundo();
+          break;
+        case "section-3":
+          showTercero();
+          break;
+        case "section-4":
+          showCuarto();
+          break;
+        case "section-5":
+          showQuinto();
+          break;
+        default:
+          break;
+      }
+    });
   });
 };
 
@@ -125,3 +146,111 @@ const menuCircular = () => {
   });
   botonElegido();
 };
+
+/*
+// Create a timeline
+const tl1 = gsap
+  .timeline({
+    delay: 5,
+    defaults: {
+      duration: 2,
+      ease: "power2.inOut",
+    },
+    smoothChildTiming: true,
+    //autoRemoveChildren: true,
+  })
+  .to(".setcion-1", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-2")
+  .to(".setcion-2", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-3")
+  .to(".setcion-3", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-4")
+  .to(".setcion-4", {
+    top: "-100vh", // any properties (not limited to CSS)
+  })
+  .addLabel("toSection-5");
+  */
+
+function showSegundo() {
+  gsap
+    .timeline()
+    .to(`#section-5`, {
+      top: "-100vh",
+      left: "0",
+      duration: 0.3,
+      ease: "back.inOut(1)",
+    })
+    .to(`#section-4`, {
+      top: "0",
+      left: "100vw",
+      duration: 0.3,
+      ease: "back.inOut(1)",
+    })
+    .to(`#section-3`, {
+      top: "0",
+      left: "-100vw",
+      duration: 0.3,
+      ease: "back.inOut(1)",
+    })
+    .to(`#section-2`, {
+      top: "0",
+      left: "0",
+      duration: 1,
+      ease: "back.inOut(1)",
+    });
+}
+
+function showTercero() {
+  gsap
+    .timeline()
+    .to(`#section-5`, {
+      top: "-100vh",
+      left: "0",
+      duration: 0.3,
+      ease: "back.inOut(1)",
+    })
+    .to(`#section-4`, {
+      top: "0",
+      left: "100vw",
+      duration: 0.3,
+      ease: "back.inOut(1)",
+    })
+    .to(`#section-3`, {
+      top: "0",
+      left: "0",
+      duration: 1,
+      ease: "back.inOut(1)",
+    });
+}
+
+function showCuarto() {
+  gsap
+    .timeline()
+    .to(`#section-5`, {
+      top: "-100vh",
+      left: "0",
+      duration: 0.3,
+      ease: "back.inOut(1)",
+    })
+    .to(`#section-4`, {
+      top: "0",
+      left: "0",
+      duration: 1,
+      ease: "back.inOut(1)",
+    });
+}
+
+function showQuinto() {
+  gsap.timeline().to(`#section-5`, {
+    top: "0",
+    left: "0",
+    duration: 1,
+    ease: "back.inOut(1)",
+  });
+}

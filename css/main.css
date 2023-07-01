@@ -266,6 +266,7 @@ body {
   font-size: 0.9rem;
   line-height: 1.5rem;
   font-weight: 300;
+  overflow: hidden;
 }
 
 main {
@@ -280,6 +281,12 @@ section {
   width: 100vw;
 }
 
+.section-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .div-relativo {
   position: relative;
   height: 100%;
@@ -288,7 +295,7 @@ section {
 }
 
 #section-1 {
-  z-index: 99;
+  z-index: 81;
   background-color: #141e30;
   background-image: linear-gradient(to right, #141e30, #243b55);
   top: 0px;
@@ -296,53 +303,44 @@ section {
 }
 
 #section-2 {
-  z-index: 98;
+  z-index: 82;
   background-color: #2d0e0e;
   background-image: linear-gradient(to right, #2d0e0e, #581c1c);
-  top: 0px;
+  top: 100vh;
   left: 0px;
 }
 
 #section-3 {
-  z-index: 97;
+  z-index: 83;
   background-color: #484815;
   background-image: linear-gradient(to right, #484815, #92922b);
   top: 0px;
-  left: 0px;
+  left: -100vw;
 }
 
 #section-4 {
-  z-index: 96;
+  z-index: 84;
   background-color: #133513;
   background-image: linear-gradient(to right, #133513, #297229);
   top: 0px;
-  left: 0px;
+  left: 100vw;
 }
 
 #section-5 {
-  z-index: 95;
+  z-index: 85;
   background-color: #341235;
   background-image: linear-gradient(to right, #341235, #732775);
-  top: 0px;
+  top: -100vh;
   left: 0px;
 }
 
-.contenedor-pizarra {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-  padding-top: 20px;
-  height: 100%;
-}
-
 .contenedor-menu {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) translateY(0) translateX(0);
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -416,7 +414,6 @@ section {
 }
 
 #precarga {
-  position: absolute;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
@@ -428,7 +425,6 @@ section {
 }
 
 .latido-1 {
-  position: absolute;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;

@@ -6,12 +6,6 @@
   transform: translate(-50%, -50%) translateY($transY) translateX($transX);
 }
 
-@mixin contenedor-1 {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-
 @mixin texto-grande($color, $fs) {
   text-align: center;
   font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
@@ -25,15 +19,10 @@
   //font-style: normal;
 }
 
-.contenedor-pizarra {
-  @include contenedor-1;
-  padding-top: 20px;
-  height: 100%;
-}
-
 .contenedor-menu {
-  @include contenedor-1;
   @include absolute-centrado(0, 0);
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +80,7 @@
 }
 
 @mixin latido-1 {
-  position: absolute;
+  //position: absolute;
   animation: fadeInOut 2s infinite;
   /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;

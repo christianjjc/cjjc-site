@@ -11,8 +11,8 @@
 <body>
     <header>
     </header>
-    <main>
-        <section id="section-1"><!-- absoluto -->
+    <main id="main">
+        <section id="section-1" class="setcion-1"><!-- absoluto -->
             <div class="div-relativo"><!-- relativo -->
                 <div id="pizarra-codigo" class="no-blurreado"> <!-- absoluto -->
                     <div id="botonera" class="btn oculto">
@@ -31,14 +31,14 @@
                         <ul class="menu">
                             <div class="toggle"><ion-icon name="add-outline">
                                 </ion-icon></div>
-                            <li id="li-0" text-value="RRSS" style="--i:0"><a href="#"><ion-icon
+                            <li id="li-0" seccion="section-2" text-value="RRSS" style="--i:0"><a href="#"><ion-icon
                                         name="home-outline"></ion-icon></a>
                             </li>
-                            <li id="li-1" text-value="Sobre Mi" style="--i:1" class="active"><a href="#"><ion-icon
-                                        name="person-outline"></ion-icon></a></li>
-                            <li id="li-2" text-value="Portafolio" style="--i:2"><a href="#"><ion-icon
-                                        name="settings-outline"></ion-icon></a></li>
-                            <li id="li-3" text-value="Escríbeme" style="--i:3"><a href="#"><ion-icon
+                            <li id="li-1" seccion="section-3" text-value="Sobre Mi" style="--i:1" class="active"><a
+                                    href="#"><ion-icon name="person-outline"></ion-icon></a></li>
+                            <li id="li-2" seccion="section-4" text-value="Portafolio" style="--i:2"><a
+                                    href="#"><ion-icon name="settings-outline"></ion-icon></a></li>
+                            <li id="li-3" seccion="section-5" text-value="Escríbeme" style="--i:3"><a href="#"><ion-icon
                                         name="mail-outline"></ion-icon></a></li>
                             <div class="indicator"></div>
                         </ul>
@@ -58,20 +58,32 @@
                 <li></li>
             </ul>
         </section>
-        <section id="section-2"><!-- absoluto -->
-            <div class="div-relativo"><!-- relativo -->
+        <section id="section-2" class="setcion-2"><!-- absoluto -->
+            <div class="div-relativo  section-flex"><!-- relativo -->
+                <div class="id-txt">
+                    SEGUNDO PANEL
+                </div>
             </div>
         </section>
-        <section id="section-3"><!-- absoluto -->
-            <div class="div-relativo"><!-- relativo -->
+        <section id="section-3" class="setcion-3"><!-- absoluto -->
+            <div class="div-relativo  section-flex"><!-- relativo -->
+                <div class="id-txt">
+                    TERCER PANEL
+                </div>
             </div>
         </section>
-        <section id="section-4"><!-- absoluto -->
-            <div class="div-relativo"><!-- relativo -->
+        <section id="section-4" class="setcion-4"><!-- absoluto -->
+            <div class="div-relativo  section-flex"><!-- relativo -->
+                <div class="id-txt">
+                    CUARTO PANEL
+                </div>
             </div>
         </section>
-        <section id="section-5"><!-- absoluto -->
-            <div class="div-relativo"><!-- relativo -->
+        <section id="section-5" class="setcion-5"><!-- absoluto -->
+            <div class="div-relativo  section-flex"><!-- relativo -->
+                <div class="id-txt">
+                    QUINTO PANEL
+                </div>
             </div>
         </section>
     </main>
@@ -83,7 +95,11 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
     <script src="./js/main.js"></script>
 </body>
 
