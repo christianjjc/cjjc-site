@@ -87,33 +87,26 @@ const iniciaPagina = () => {
 
 iniciaPagina();
 
+const btnAcceder = document.querySelector("#btn-acceder");
+btnAcceder.addEventListener("click", () => {
+  showSegundo();
+});
+
 function showSegundo() {
   gsap
     .timeline()
-    .to(`#section-5`, {
+    .to(`#section-1`, {
+      scale: "0.9",
+      left: "0",
+      duration: 1,
+      ease: "power1.inOut",
+    })
+    .to(`#section-1`, {
       top: "-100vh",
       left: "0",
-      duration: 0.1,
-      ease: "power1.inOut",
-    })
-    .to(`#section-4`, {
-      top: "0",
-      left: "100vw",
-      duration: 0.1,
-      ease: "power1.inOut",
-    })
-    .to(`#section-3`, {
-      top: "0",
-      left: "-100vw",
-      duration: 0.1,
-      ease: "power1.inOut",
-    })
-    .to(`#section-2`, {
-      top: "0",
-      left: "0",
-      duration: 2,
-      ease: "back.inOut(1)",
-      onComplete: botonToggle(),
+      duration: 1,
+      ease: "back.inOut(4)",
+      //onComplete: botonToggle(),
     });
 }
 
