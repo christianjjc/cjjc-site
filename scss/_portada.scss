@@ -164,3 +164,11 @@
     opacity: 1;
   }
 }
+
+.contenedor-relativo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 250px;
+  justify-content: space-between;
+}

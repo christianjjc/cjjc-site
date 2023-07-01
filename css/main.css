@@ -140,10 +140,18 @@
     border-radius: 50%;
   }
 }
-.menu {
+/* .menu {
   position: relative;
   width: 300px;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.menu {
+  position: relative;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,7 +182,7 @@
 .menu li {
   position: absolute;
   list-style: none;
-  left: 10px;
+  left: -40px;
   transform: rotate(calc(90deg * var(--i))) translateX(40px);
   transform-origin: 140px;
   visibility: hidden;
@@ -498,6 +506,14 @@ section {
     opacity: 1;
   }
 }
+.contenedor-relativo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 250px;
+  justify-content: space-between;
+}
+
 /* Pantallas mini a sm */
 /* Pantallas sm a md */
 /* Pantallas xl */

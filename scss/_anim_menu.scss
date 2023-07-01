@@ -1,7 +1,16 @@
-.menu {
+/* .menu {
   position: relative;
   width: 300px;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.menu {
+  position: relative;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +41,7 @@
 .menu li {
   position: absolute;
   list-style: none;
-  left: 10px;
+  left: -40px;
   transform: rotate(calc(360deg / 4 * var(--i))) translateX(40px);
   transform-origin: 140px;
   visibility: hidden;
