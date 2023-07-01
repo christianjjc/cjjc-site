@@ -123,8 +123,6 @@ const botonElegido = () => {
         case "section-5":
           showQuinto();
           break;
-        default:
-          break;
       }
     });
   });
@@ -183,25 +181,25 @@ function showSegundo() {
     .to(`#section-5`, {
       top: "-100vh",
       left: "0",
-      duration: 0.3,
-      ease: "back.inOut(1)",
+      duration: 0.1,
+      ease: "power1.inOut",
     })
     .to(`#section-4`, {
       top: "0",
       left: "100vw",
-      duration: 0.3,
-      ease: "back.inOut(1)",
+      duration: 0.1,
+      ease: "power1.inOut",
     })
     .to(`#section-3`, {
       top: "0",
       left: "-100vw",
-      duration: 0.3,
-      ease: "back.inOut(1)",
+      duration: 0.1,
+      ease: "power1.inOut",
     })
     .to(`#section-2`, {
       top: "0",
       left: "0",
-      duration: 1,
+      duration: 2,
       ease: "back.inOut(1)",
     });
 }
@@ -212,19 +210,19 @@ function showTercero() {
     .to(`#section-5`, {
       top: "-100vh",
       left: "0",
-      duration: 0.3,
-      ease: "back.inOut(1)",
+      duration: 0.1,
+      ease: "power1.inOut",
     })
     .to(`#section-4`, {
       top: "0",
       left: "100vw",
-      duration: 0.3,
-      ease: "back.inOut(1)",
+      duration: 0.1,
+      ease: "power1.inOut",
     })
     .to(`#section-3`, {
       top: "0",
       left: "0",
-      duration: 1,
+      duration: 2,
       ease: "back.inOut(1)",
     });
 }
@@ -235,13 +233,13 @@ function showCuarto() {
     .to(`#section-5`, {
       top: "-100vh",
       left: "0",
-      duration: 0.3,
-      ease: "back.inOut(1)",
+      duration: 0.1,
+      ease: "power1.inOut",
     })
     .to(`#section-4`, {
       top: "0",
       left: "0",
-      duration: 1,
+      duration: 2,
       ease: "back.inOut(1)",
     });
 }
@@ -250,7 +248,7 @@ function showQuinto() {
   gsap.timeline().to(`#section-5`, {
     top: "0",
     left: "0",
-    duration: 1,
+    duration: 2,
     ease: "back.inOut(1)",
   });
 }

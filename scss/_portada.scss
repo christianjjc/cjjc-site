@@ -20,12 +20,13 @@
 }
 
 .contenedor-menu {
-  @include absolute-centrado(0, 0);
+  @include absolute-centrado(30vh, 0);
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 86;
 }
 
 .nombre {
