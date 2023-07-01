@@ -375,6 +375,7 @@ section {
   line-height: 1.5rem;
   font-style: normal;
   font-weight: 400;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -507,11 +508,7 @@ section {
   }
 }
 .contenedor-relativo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  height: 250px;
-  justify-content: space-between;
+  position: relative;
 }
 
 /* Pantallas mini a sm */

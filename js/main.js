@@ -128,19 +128,30 @@ const botonElegido = () => {
   });
 };
 
+const botonToggle = () => {
+  const menuToggle = document.querySelector(".toggle");
+  const contenedorMenu = document.querySelector(".contenedor-menu");
+  const nombreopcion = document.querySelector(".nombre-opcion");
+  const menu = document.querySelector(".menu");
+  menu.classList.toggle("active");
+  contenedorMenu.classList.toggle("latido-1");
+  nombreopcion.classList.toggle("oculto");
+  menuToggle.classList.toggle("active");
+};
+
 const menuCircular = () => {
+  const menuToggle = document.querySelector(".toggle");
   const divPizarra = document.getElementById("pizarra-codigo");
   const contenedorMenu = document.querySelector(".contenedor-menu");
   const nombreopcion = document.querySelector(".nombre-opcion");
-  const menuToggle = document.querySelector(".toggle");
   const menu = document.querySelector(".menu");
   menuToggle.addEventListener("click", () => {
     menu.classList.toggle("active");
-    menuToggle.classList.toggle("active");
     contenedorMenu.classList.toggle("latido-1");
     nombreopcion.classList.toggle("oculto");
     divPizarra.classList.toggle("blurreado");
     divPizarra.classList.toggle("no-blurreado");
+    menuToggle.classList.toggle("active");
   });
   botonElegido();
 };
@@ -201,6 +212,7 @@ function showSegundo() {
       left: "0",
       duration: 2,
       ease: "back.inOut(1)",
+      onComplete: botonToggle(),
     });
 }
 
@@ -224,6 +236,7 @@ function showTercero() {
       left: "0",
       duration: 2,
       ease: "back.inOut(1)",
+      onComplete: botonToggle(),
     });
 }
 
@@ -241,6 +254,7 @@ function showCuarto() {
       left: "0",
       duration: 2,
       ease: "back.inOut(1)",
+      onComplete: botonToggle(),
     });
 }
 
@@ -250,5 +264,8 @@ function showQuinto() {
     left: "0",
     duration: 2,
     ease: "back.inOut(1)",
+    onComplete: botonToggle(),
   });
+  const menuToggle = document.querySelector(".toggle");
+  menuToggle.click;
 }
