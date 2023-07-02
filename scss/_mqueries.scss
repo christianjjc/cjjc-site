@@ -1,31 +1,77 @@
-/* Pantallas mini a sm */
-@media screen and (max-width: 576px) {
+@media (max-width: 280px) {
+  /* Estilos para dispositivos móviles */
+  .nav-menu-1 {
+    font-size: 10px;
+    li {
+      margin: 10px 3px;
+    }
+  }
 }
 
-/* Pantallas sm a md */
-@media screen and (min-width: 578px) {
+@media (min-width: 281px) and (max-width: 320px) {
+  /* Estilos para dispositivos móviles */
+  .nav-menu-1 {
+    font-size: 12px;
+    li {
+      margin: 10px 7px;
+    }
+  }
 }
 
-/* Pantallas xl */
-@media screen and (min-width: 768px) {
+@media (min-width: 321px) and (max-width: 360px) {
+  .nav-menu-1 {
+    font-size: 12px;
+    li {
+      margin: 10px 7px;
+    }
+  }
+}
+
+@media (min-width: 361px) and (max-width: 390px) {
+  .nav-menu-1 li {
+    margin: 10px 10px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 767px) {
+  .nav-menu-1 li {
+    margin: 10px 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
   .codigo {
     font-size: $glb-fs;
     line-height: $glb-fs-lh;
   }
-  /*   .nombre {
-    font-size: 3.5rem;
-  } */
+  .nav-menu-1 li {
+    margin: 0.5em 1.5em;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1239px) {
+  .codigo {
+    font-size: $glb-fs;
+    line-height: $glb-fs-lh;
+  }
+  .nav-menu-1 li {
+    margin: 10px 10px;
+  }
 }
 
 /* Pantallas xxl */
-@media screen and (min-width: 992px) {
-}
-
-/* Pantallas xxl */
-@media screen and (min-width: 1240px) {
+@media (min-width: 1240px) {
+  .codigo {
+    font-size: $glb-fs;
+    line-height: $glb-fs-lh;
+  }
   .height-auto {
     height: auto;
     width: 690px;
+  }
+
+  .nav-menu-1 li {
+    margin: 0.5em 1.5em;
   }
 
   /* .nombre {
@@ -40,12 +86,4 @@
       width: 690px;
     }
   }
-}
-
-/* Pantallas xxl */
-@media screen and (min-width: 1500px) {
-}
-
-/* Pantallas xxxl */
-@media screen and (min-width: 1750px) {
 }
