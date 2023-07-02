@@ -550,12 +550,20 @@ main {
   }
 }
 @media (min-width: 993px) and (max-width: 1239px) {
+  .codigo {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
   .nav-menu-1 li {
     margin: 10px 10px;
   }
 }
 /* Pantallas xxl */
 @media (min-width: 1240px) {
+  .codigo {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
   .height-auto {
     height: auto;
     width: 690px;
