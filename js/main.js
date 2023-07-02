@@ -88,18 +88,29 @@ const iniciaPagina = () => {
 
 iniciaPagina();
 
-const btnServicios = document.querySelector("#btn-acceder");
+const btnAcceder = document.querySelector("#btn-acceder");
+btnAcceder.addEventListener("click", () => {
+  showSegundo();
+});
+
+const btnServicios = document.querySelector("#btn-servicios");
 btnServicios.addEventListener("click", () => {
+  showQuinto(true);
+  showCuarto(true);
+  showTercero(true);
   showSegundo();
 });
 
 const btnPortafolio = document.querySelector("#btn-portafolio");
 btnPortafolio.addEventListener("click", () => {
+  showQuinto(true);
+  showCuarto(true);
   showTercero();
 });
 
 const btnAbout = document.querySelector("#btn-about");
 btnAbout.addEventListener("click", () => {
+  showQuinto(true);
   showCuarto();
 });
 
@@ -108,77 +119,140 @@ btnContacto.addEventListener("click", () => {
   showQuinto();
 });
 
-function showSegundo() {
-  gsap
-    .timeline()
-    .to(`#section-1`, {
-      scale: "0.9",
-      left: "0",
-      duration: 1,
-      ease: "power1.inOut",
-    })
-    .to(`#section-1`, {
-      top: "-100vh",
-      left: "0",
-      duration: 1,
-      ease: "back.inOut(4)",
-      //onComplete: botonToggle(),
-    });
+function showNav() {
+  gsap.timeline().to(`#section-nav`, {
+    top: "0",
+    duration: 1,
+    ease: "back.inOut(1.7)",
+    //onComplete: botonToggle(),
+  });
 }
 
-function showTercero() {
-  gsap
-    .timeline()
-    .to(`#section-3`, {
-      top: "0",
-      left: "0",
-      duration: 1,
-      ease: "back.inOut(4)",
-      //onComplete: botonToggle(),
-    })
-    .to(`#section-3`, {
-      scale: "1",
-      duration: 1,
-      ease: "power1.inOut",
-    });
+function showSegundo(reverse = false) {
+  if (reverse) {
+  } else {
+    let tl = gsap
+      .timeline()
+      .to(`#section-1`, {
+        scale: "0.9",
+        left: "0",
+        duration: 1,
+        ease: "power1.inOut",
+      })
+      .to(`#section-1`, {
+        top: "-100vh",
+        left: "0",
+        duration: 1,
+        ease: "back.inOut(4)",
+        onComplete: showNav,
+      });
+  }
 }
 
-function showCuarto() {
-  gsap
-    .timeline()
-    .to(`#section-4`, {
-      top: "0",
-      left: "0",
-      duration: 1,
-      ease: "back.inOut(4)",
-      //onComplete: botonToggle(),
-    })
-    .to(`#section-4`, {
-      scale: "1",
-      duration: 1,
-      ease: "power1.inOut",
-    });
+function showTercero(reverse = false) {
+  if (reverse) {
+    let tl = gsap
+      .timeline()
+      .to(`#section-3`, {
+        scale: "0.9",
+        duration: 0.5,
+        ease: "power4.inOut",
+        //onComplete: botonToggle(),
+      })
+      .to(`#section-3`, {
+        left: "-100vw",
+        duration: 0.5,
+        ease: "power4.inOut",
+        //onComplete: botonToggle(),
+      });
+  } else {
+    let tl = gsap
+      .timeline()
+      .to(`#section-3`, {
+        top: "0",
+        left: "0",
+        duration: 1,
+        ease: "back.inOut(4)",
+        //onComplete: botonToggle(),
+      })
+      .to(`#section-3`, {
+        scale: "1",
+        duration: 1,
+        ease: "power1.inOut",
+      });
+  }
 }
 
-function showQuinto() {
-  gsap
-    .timeline()
-    .to(`#section-5`, {
-      top: "0",
-      left: "0",
-      duration: 1,
-      ease: "back.inOut(4)",
-      //onComplete: botonToggle(),
-    })
-    .to(`#section-5`, {
-      scale: "1",
-      duration: 1,
-      ease: "power1.inOut",
-    });
+function showCuarto(reverse = false) {
+  if (reverse) {
+    let tl = gsap
+      .timeline()
+      .to(`#section-4`, {
+        scale: "0.9",
+        duration: 0.5,
+        ease: "power4.inOut",
+        //onComplete: botonToggle(),
+      })
+      .to(`#section-4`, {
+        left: "100vw",
+        duration: 0.5,
+        ease: "power4.inOut",
+        //onComplete: botonToggle(),
+      });
+  } else {
+    let tl = gsap
+      .timeline()
+      .to(`#section-4`, {
+        top: "0",
+        left: "0",
+        duration: 1,
+        ease: "back.inOut(4)",
+        //onComplete: botonToggle(),
+      })
+      .to(`#section-4`, {
+        scale: "1",
+        duration: 1,
+        ease: "power1.inOut",
+      });
+  }
+}
+
+function showQuinto(reverse = false) {
+  if (reverse) {
+    let tl = gsap
+      .timeline()
+      .to(`#section-5`, {
+        scale: "0.9",
+        duration: 0.5,
+        ease: "power4.inOut",
+        //onComplete: botonToggle(),
+      })
+      .to(`#section-5`, {
+        top: "-100vh",
+        duration: 0.5,
+        ease: "power4.inOut",
+        //onComplete: botonToggle(),
+      });
+  } else {
+    let tl = gsap
+      .timeline()
+      .to(`#section-5`, {
+        top: "0",
+        left: "0",
+        duration: 1,
+        ease: "back.inOut(4)",
+        //onComplete: botonToggle(),
+      })
+      .to(`#section-5`, {
+        scale: "1",
+        duration: 1,
+        ease: "power1.inOut",
+      });
+  }
 }
 
 function agrandaPizarra() {
-  gsap
+  let tl = gsap
     .timeline()
     .to(`#pizarra-codigo`, {
       height: gsap.getProperty("#pizarra-codigo", "height") + 70,
