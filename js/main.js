@@ -88,6 +88,14 @@ const iniciaPagina = () => {
 
 iniciaPagina();
 
+const menuElegido = (botonElegido) => {
+  const botonesMenuNav = document.querySelectorAll(".btn-menu-nav");
+  botonesMenuNav.forEach((el) => {
+    el.classList.remove("current");
+  });
+  botonElegido.classList.add("current");
+};
+
 const btnAcceder = document.querySelector("#btn-acceder");
 btnAcceder.addEventListener("click", () => {
   showSegundo();
@@ -95,6 +103,7 @@ btnAcceder.addEventListener("click", () => {
 
 const btnServicios = document.querySelector("#btn-servicios");
 btnServicios.addEventListener("click", () => {
+  menuElegido(btnServicios);
   showQuinto(true);
   showCuarto(true);
   showTercero(true);
@@ -103,6 +112,7 @@ btnServicios.addEventListener("click", () => {
 
 const btnPortafolio = document.querySelector("#btn-portafolio");
 btnPortafolio.addEventListener("click", () => {
+  menuElegido(btnPortafolio);
   showQuinto(true);
   showCuarto(true);
   showTercero();
@@ -110,12 +120,14 @@ btnPortafolio.addEventListener("click", () => {
 
 const btnAbout = document.querySelector("#btn-about");
 btnAbout.addEventListener("click", () => {
+  menuElegido(btnAbout);
   showQuinto(true);
   showCuarto();
 });
 
 const btnContacto = document.querySelector("#btn-contacto");
 btnContacto.addEventListener("click", () => {
+  menuElegido(btnContacto);
   showQuinto();
 });
 
