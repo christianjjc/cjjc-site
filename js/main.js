@@ -253,7 +253,7 @@ function showQuinto(reverse = false) {
         left: "0",
         duration: 1,
         ease: "back.inOut(4)",
-        //onComplete: botonToggle(),
+        onComplete: showRRSS,
       })
       .to(`#section-5`, {
         scale: "1",
@@ -277,4 +277,20 @@ function agrandaPizarra() {
       duration: 0.5,
       ease: "power1.inOut",
     });
+}
+
+function showRRSS() {
+  let tl = gsap.to(".item-rrss", {
+    opacity: 1,
+    top: "0",
+    ease: "power1.inOut",
+    //repeat: 2,
+    //yoyo: true,
+    delay: 1,
+    stagger: {
+      //grid: [7,15],
+      from: 0,
+      amount: 1,
+    },
+  });
 }
