@@ -12,7 +12,17 @@
     <header>
     </header>
     <main id="main">
-        <section id="section-1" class="setcion-1"><!-- absoluto -->
+        <section id="section-nav">
+            <nav>
+                <ul>
+                    <li>Servicios</li>
+                    <li>Portafolio</li>
+                    <li>Acerca de mi</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+        </section>
+        <section id="section-1" class="section-pagina setcion-1"><!-- absoluto -->
             <div class="div-relativo"><!-- relativo -->
                 <div id="pizarra-codigo" class="no-blurreado"> <!-- absoluto -->
                     <div id="botonera" class="btn oculto">
@@ -21,6 +31,9 @@
                         <div class="btn-cierra c"></div>
                     </div>
                     <div id="contenedor-mensajes" class="codigo">
+                    </div>
+                    <div id="menu-botones-1" class="botones-menu">
+                        <div id="btn-acceder" class="pure-button fuller-button white">Acceder</div>
                     </div>
                 </div>
             </div>
@@ -37,55 +50,34 @@
                 <li></li>
             </ul>
         </section>
-        <section id="section-2" class="setcion-2"><!-- absoluto -->
+        <section id="section-2" class="section-pagina setcion-2"><!-- absoluto -->
             <div class="div-relativo  section-flex"><!-- relativo -->
                 <div class="id-txt">
-                    SEGUNDO PANEL
+                    ¿EN QUÉ TE PUEDO AYUDAR?
                 </div>
             </div>
         </section>
-        <section id="section-3" class="setcion-3"><!-- absoluto -->
+        <section id="section-3" class="section-pagina setcion-3"><!-- absoluto -->
             <div class="div-relativo  section-flex"><!-- relativo -->
                 <div class="id-txt">
-                    TERCER PANEL
+                    MI PORTAFOLIO
                 </div>
             </div>
         </section>
-        <section id="section-4" class="setcion-4"><!-- absoluto -->
+        <section id="section-4" class="section-pagina setcion-4"><!-- absoluto -->
             <div class="div-relativo  section-flex"><!-- relativo -->
                 <div class="id-txt">
-                    CUARTO PANEL
+                    ACERCA DE MI
                 </div>
             </div>
         </section>
-        <section id="section-5" class="setcion-5"><!-- absoluto -->
+        <section id="section-5" class="section-pagina setcion-5"><!-- absoluto -->
             <div class="div-relativo  section-flex"><!-- relativo -->
                 <div class="id-txt">
-                    QUINTO PANEL
+                    CONTACTO
                 </div>
             </div>
         </section>
-        <div class="contenedor-menu latido-1 oculto"> <!-- absoluto -->
-            <div class="contenedor-relativo">
-                <div class="nombre nombre-opcion oculto">
-                    <span id="titulo-elegido">Sobre Mi</span>
-                </div>
-                <ul class="menu">
-                    <div class="toggle"><ion-icon name="add-outline">
-                        </ion-icon></div>
-                    <li id="li-0" seccion="section-5" text-value="RRSS" style="--i:0"><a href="#"><ion-icon
-                                name="home-outline"></ion-icon></a>
-                    </li>
-                    <li id="li-1" seccion="section-2" text-value="Sobre Mi" style="--i:1" class="active"><a
-                            href="#"><ion-icon name="person-outline"></ion-icon></a></li>
-                    <li id="li-2" seccion="section-3" text-value="Portafolio" style="--i:2"><a href="#"><ion-icon
-                                name="settings-outline"></ion-icon></a></li>
-                    <li id="li-3" seccion="section-4" text-value="Escríbeme" style="--i:3"><a href="#"><ion-icon
-                                name="mail-outline"></ion-icon></a></li>
-                    <div class="indicator"></div>
-                </ul>
-            </div>
-        </div>
     </main>
     <footer>
     </footer>
@@ -97,8 +89,6 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
 
     <script src="./js/main.js"></script>
 </body>
