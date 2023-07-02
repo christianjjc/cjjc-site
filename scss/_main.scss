@@ -30,7 +30,7 @@ main {
   width: 100vw;
 }
 
-section {
+.section-pagina {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -69,6 +69,7 @@ section {
   z-index: 83;
   background-color: #484815;
   background-image: linear-gradient(to right, #484815, #92922b);
+  scale: 0.8;
   top: 0px;
   left: -100vw;
 }
@@ -77,6 +78,7 @@ section {
   z-index: 84;
   background-color: #133513;
   background-image: linear-gradient(to right, #133513, #297229);
+  scale: 0.8;
   top: 0px;
   left: 100vw;
 }
@@ -85,6 +87,22 @@ section {
   z-index: 85;
   background-color: #341235;
   background-image: linear-gradient(to right, #341235, #732775);
+  scale: 0.8;
   top: -100vh;
   left: 0px;
+}
+
+.id-txt {
+  color: white;
+}
+
+#section-nav {
+  position: absolute;
+  z-index: 88;
+  background-color: white;
+  color: black;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100px;
 }
