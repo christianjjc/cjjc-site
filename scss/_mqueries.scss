@@ -47,6 +47,12 @@
   .nav-menu-1 li {
     margin: 0.5em 1.5em;
   }
+  .screen {
+    height: 420px;
+  }
+  .menu-rss {
+    top: 250px;
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1239px) {
@@ -56,6 +62,12 @@
   }
   .nav-menu-1 li {
     margin: 10px 10px;
+  }
+  .screen {
+    height: 420px;
+  }
+  .menu-rss {
+    top: 250px;
   }
 }
 
@@ -73,7 +85,12 @@
   .nav-menu-1 li {
     margin: 0.5em 1.5em;
   }
-
+  .screen {
+    height: 420px;
+  }
+  .menu-rss {
+    top: 250px;
+  }
   /* .nombre {
     font-size: 4.5rem;
   } */
