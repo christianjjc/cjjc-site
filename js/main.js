@@ -147,7 +147,7 @@ function showSegundo(reverse = false) {
     let tl = gsap
       .timeline()
       .to(`#section-1`, {
-        scale: "0.8",
+        scale: "0.9",
         left: "0",
         duration: 0.5,
         ease: "power1.inOut",
@@ -168,7 +168,7 @@ function showTercero(reverse = false) {
     let tl = gsap
       .timeline()
       .to(`#section-3`, {
-        scale: "0.8",
+        scale: "0.9",
         duration: 0.5,
         ease: "power4.inOut",
         //onComplete: botonToggle(),
@@ -202,7 +202,7 @@ function showCuarto(reverse = false) {
     let tl = gsap
       .timeline()
       .to(`#section-4`, {
-        scale: "0.8",
+        scale: "0.9",
         duration: 0.5,
         ease: "power4.inOut",
         //onComplete: botonToggle(),
@@ -236,7 +236,7 @@ function showQuinto(reverse = false) {
     let tl = gsap
       .timeline()
       .to(`#section-5`, {
-        scale: "0.8",
+        scale: "0.9",
         duration: 0.5,
         ease: "power4.inOut",
         //onComplete: botonToggle(),

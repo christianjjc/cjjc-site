@@ -291,7 +291,7 @@ main {
   z-index: 83;
   background-color: #484815;
   background-image: linear-gradient(to right, #484815, #92922b);
-  scale: 0.8;
+  scale: 0.9;
   top: 0px;
   left: -100vw;
 }
@@ -300,7 +300,7 @@ main {
   z-index: 84;
   background-color: #133513;
   background-image: linear-gradient(to right, #133513, #297229);
-  scale: 0.8;
+  scale: 0.9;
   top: 0px;
   left: 100vw;
 }
@@ -309,7 +309,7 @@ main {
   z-index: 85;
   background-color: #141e30;
   background-image: linear-gradient(to right, #141e30, #243b55);
-  scale: 0.8;
+  scale: 0.9;
   top: -100vh;
   left: 0px;
 }
@@ -333,7 +333,7 @@ main {
   position: absolute;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 3rem;
   letter-spacing: 1px;
   opacity: 0;
   scale: 1.5;
@@ -342,6 +342,8 @@ main {
   align-items: center;
   width: 100%;
   height: 100%;
+  line-height: 4rem;
+  text-align: center;
 }
 
 .txt-servicios-pregunta {
@@ -997,6 +999,10 @@ span a {
   .menu-rss {
     top: 250px;
   }
+  .txt-servicios {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
 }
 @media (min-width: 993px) and (max-width: 1239px) {
   .codigo {
@@ -1011,6 +1017,10 @@ span a {
   }
   .menu-rss {
     top: 250px;
+  }
+  .txt-servicios {
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
 /* Pantallas xxl */
@@ -1031,6 +1041,10 @@ span a {
   }
   .menu-rss {
     top: 250px;
+  }
+  .txt-servicios {
+    font-size: 6rem;
+    line-height: 6rem;
   }
   /* .nombre {
     font-size: 4.5rem;
