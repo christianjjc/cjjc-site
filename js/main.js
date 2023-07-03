@@ -1,3 +1,4 @@
+let GLB_SW_MENSAJES_SERVICIOS = false;
 let sw = true;
 let textoescribir = "";
 let i = 0;
@@ -148,15 +149,16 @@ function showSegundo(reverse = false) {
       .to(`#section-1`, {
         scale: "0.8",
         left: "0",
-        duration: 1,
+        duration: 0.5,
         ease: "power1.inOut",
       })
       .to(`#section-1`, {
         top: "-100vh",
         left: "0",
-        duration: 1,
+        duration: 0.5,
         ease: "back.inOut(4)",
         onComplete: showNav,
+        showServiciosText,
       });
   }
 }
@@ -183,13 +185,13 @@ function showTercero(reverse = false) {
       .to(`#section-3`, {
         top: "0",
         left: "0",
-        duration: 1,
+        duration: 0.5,
         ease: "back.inOut(4)",
         //onComplete: botonToggle(),
       })
       .to(`#section-3`, {
         scale: "1",
-        duration: 1,
+        duration: 0.5,
         ease: "power1.inOut",
       });
   }
@@ -217,13 +219,13 @@ function showCuarto(reverse = false) {
       .to(`#section-4`, {
         top: "0",
         left: "0",
-        duration: 1,
+        duration: 0.5,
         ease: "back.inOut(4)",
         //onComplete: botonToggle(),
       })
       .to(`#section-4`, {
         scale: "1",
-        duration: 1,
+        duration: 0.5,
         ease: "power1.inOut",
       });
   }
@@ -251,13 +253,13 @@ function showQuinto(reverse = false) {
       .to(`#section-5`, {
         top: "0",
         left: "0",
-        duration: 1,
+        duration: 0.5,
         ease: "back.inOut(4)",
         onComplete: showRRSS,
       })
       .to(`#section-5`, {
         scale: "1",
-        duration: 1,
+        duration: 0.5,
         ease: "power1.inOut",
       });
   }
@@ -280,7 +282,7 @@ function agrandaPizarra() {
 }
 
 function showRRSS() {
-  let tl = gsap.to(".item-rrss", {
+  let tl = gsap.timeline().to(".item-rrss", {
     opacity: 1,
     top: "0",
     ease: "power1.inOut",
@@ -293,4 +295,236 @@ function showRRSS() {
       amount: 1,
     },
   });
+}
+
+function showServiciosText() {
+  if (!GLB_SW_MENSAJES_SERVICIOS) {
+    let tl = gsap
+      .timeline()
+      .to(`.txt-servicios-pregunta`, {
+        scale: "1",
+        opacity: 1,
+        duration: 1,
+        delay: 2,
+        ease: "power1.inOut",
+      })
+      .to(`.txt-servicios-pregunta`, {
+        opacity: 0,
+        duration: 0.3,
+        delay: 3,
+        ease: "power1.inOut",
+        onComplete: showServiciosTextRandom,
+      });
+    GLB_SW_MENSAJES_SERVICIOS = true;
+  }
+}
+
+function showServiciosTextRandom() {
+  const divTextos = document.querySelectorAll(".txt-show-random");
+  let tl = gsap
+    .timeline({
+      defaults: {
+        duration: 0.5,
+        ease: "power1.inOut",
+      },
+    })
+    .to(`#${divTextos[0].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[0].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[1].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[1].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[2].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[2].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[3].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[3].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[4].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[4].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[5].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[5].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[6].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[6].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[7].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[7].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[8].id}`, {
+      scale: 1,
+      opacity: 1,
+    })
+    .to(`#${divTextos[8].id}`, {
+      opacity: 0,
+      onComplete: showServiciosTextRandom2,
+    });
+}
+
+function showServiciosTextRandom2() {
+  const divTextos = document.querySelectorAll(".txt-show-random");
+  let tl = gsap
+    .timeline({
+      //repeat: 1,
+      defaults: {
+        duration: 0.5,
+        //ease: "power1.inOut",
+      },
+    })
+    .to(`#${divTextos[0].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[0].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[1].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[1].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[2].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[2].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[3].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[3].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[4].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[4].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[5].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[5].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[6].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[6].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[7].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[7].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[8].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[8].id}`, {
+      opacity: 0,
+      onComplete: showServiciosTextRandom3,
+    })
+    .timeScale(6);
+}
+
+function showServiciosTextRandom3() {
+  const divTextos = document.querySelectorAll(".txt-show-random");
+  let tl = gsap
+    .timeline({
+      repeat: 4,
+      defaults: {
+        duration: 0.1,
+        //ease: "power1.inOut",
+      },
+    })
+    .to(`#${divTextos[0].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[0].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[1].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[1].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[2].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[2].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[3].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[3].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[4].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[4].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[5].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[5].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[6].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[6].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[7].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[7].id}`, {
+      opacity: 0,
+    })
+    .to(`#${divTextos[8].id}`, {
+      opacity: 1,
+    })
+    .to(`#${divTextos[8].id}`, {
+      opacity: 0,
+    })
+    .timeScale(5);
 }
