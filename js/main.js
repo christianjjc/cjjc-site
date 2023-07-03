@@ -4,7 +4,7 @@ let textoescribir = "";
 let i = 0;
 let contador_mensajes = 0;
 let contadorseundos = 0;
-const escribirTexto = (texto, idEtiqueta, mls) => {
+function escribirTexto(texto, idEtiqueta, mls) {
   const textoElemento = document.getElementById(idEtiqueta);
   const cantCar = texto.length;
   const intervaloCaracter = setInterval(() => {
@@ -23,9 +23,9 @@ const escribirTexto = (texto, idEtiqueta, mls) => {
       textoescribir = "";
     }
   }, mls);
-};
+}
 
-const frasesEscritas = (cadaXsegundos, texto1, idEtiquetaNueva, mls, cursor = false, idEtiquetaAnt = "") => {
+function frasesEscritas(cadaXsegundos, texto1, idEtiquetaNueva, mls, cursor = false, idEtiquetaAnt = "") {
   const contenedor = document.getElementById("contenedor-mensajes");
   code = document.createElement("code");
   code.setAttribute("id", idEtiquetaNueva);
@@ -43,7 +43,7 @@ const frasesEscritas = (cadaXsegundos, texto1, idEtiquetaNueva, mls, cursor = fa
     escribirTexto(texto1, idEtiquetaNueva, mls);
   }, cadaXsegundos * 1000);
   contador_mensajes++;
-};
+}
 
 function cargaMensajes() {
   const texto1 = `$ ¡Hola! Bienvenido a mi Web Site. `;
@@ -62,7 +62,7 @@ function cargaMensajes() {
   }, (summartiempo + 4) * 1000);
 }
 
-const iniciaPagina = () => {
+function iniciaPagina() {
   const divBotonera = document.querySelector("#botonera");
   const divPizarra = document.getElementById("pizarra-codigo");
   const divPrecarga = document.getElementById("precarga");
@@ -85,7 +85,7 @@ const iniciaPagina = () => {
     divPizarra.classList.remove("pizarra-animate--height");
     divPizarra.classList.add("height-auto");
   }, 8000);
-};
+}
 
 iniciaPagina();
 
@@ -135,9 +135,9 @@ btnContacto.addEventListener("click", () => {
 function showNav() {
   gsap.timeline().to(`#section-nav`, {
     top: "0",
-    duration: 1,
-    ease: "back.inOut(1.7)",
-    //onComplete: botonToggle(),
+    delay: 2,
+    duration: 1.5,
+    ease: "back.inOut(2)",
   });
 }
 
@@ -149,16 +149,14 @@ function showSegundo(reverse = false) {
       .to(`#section-1`, {
         scale: "0.9",
         left: "0",
-        duration: 0.5,
+        duration: 0.75,
         ease: "power1.inOut",
       })
       .to(`#section-1`, {
         top: "-100vh",
-        left: "0",
         duration: 0.5,
-        ease: "back.inOut(4)",
-        onComplete: showNav,
-        showServiciosText,
+        ease: "back.inOut(2)",
+        onComplete: showServiciosText,
       });
   }
 }
@@ -169,15 +167,13 @@ function showTercero(reverse = false) {
       .timeline()
       .to(`#section-3`, {
         scale: "0.9",
-        duration: 0.5,
+        duration: 0.75,
         ease: "power4.inOut",
-        //onComplete: botonToggle(),
       })
       .to(`#section-3`, {
         left: "-100vw",
         duration: 0.5,
         ease: "power4.inOut",
-        //onComplete: botonToggle(),
       });
   } else {
     let tl = gsap
@@ -186,12 +182,11 @@ function showTercero(reverse = false) {
         top: "0",
         left: "0",
         duration: 0.5,
-        ease: "back.inOut(4)",
-        //onComplete: botonToggle(),
+        ease: "back.inOut(2)",
       })
       .to(`#section-3`, {
         scale: "1",
-        duration: 0.5,
+        duration: 0.75,
         ease: "power1.inOut",
       });
   }
@@ -203,15 +198,13 @@ function showCuarto(reverse = false) {
       .timeline()
       .to(`#section-4`, {
         scale: "0.9",
-        duration: 0.5,
+        duration: 0.75,
         ease: "power4.inOut",
-        //onComplete: botonToggle(),
       })
       .to(`#section-4`, {
         left: "100vw",
         duration: 0.5,
         ease: "power4.inOut",
-        //onComplete: botonToggle(),
       });
   } else {
     let tl = gsap
@@ -220,12 +213,11 @@ function showCuarto(reverse = false) {
         top: "0",
         left: "0",
         duration: 0.5,
-        ease: "back.inOut(4)",
-        //onComplete: botonToggle(),
+        ease: "back.inOut(2)",
       })
       .to(`#section-4`, {
         scale: "1",
-        duration: 0.5,
+        duration: 0.75,
         ease: "power1.inOut",
       });
   }
@@ -237,15 +229,13 @@ function showQuinto(reverse = false) {
       .timeline()
       .to(`#section-5`, {
         scale: "0.9",
-        duration: 0.5,
+        duration: 0.75,
         ease: "power4.inOut",
-        //onComplete: botonToggle(),
       })
       .to(`#section-5`, {
         top: "-100vh",
         duration: 0.5,
         ease: "power4.inOut",
-        //onComplete: botonToggle(),
       });
   } else {
     let tl = gsap
@@ -254,12 +244,12 @@ function showQuinto(reverse = false) {
         top: "0",
         left: "0",
         duration: 0.5,
-        ease: "back.inOut(4)",
+        ease: "back.inOut(2)",
         onComplete: showRRSS,
       })
       .to(`#section-5`, {
         scale: "1",
-        duration: 0.5,
+        duration: 0.75,
         ease: "power1.inOut",
       });
   }
@@ -288,7 +278,7 @@ function showRRSS() {
     ease: "power1.inOut",
     //repeat: 2,
     //yoyo: true,
-    delay: 1,
+    delay: 2,
     stagger: {
       //grid: [7,15],
       from: 0,
@@ -304,14 +294,14 @@ function showServiciosText() {
       .to(`.txt-servicios-pregunta`, {
         scale: "1",
         opacity: 1,
-        duration: 1,
-        delay: 2,
+        duration: 0.7,
+        delay: 0.5,
         ease: "power1.inOut",
       })
       .to(`.txt-servicios-pregunta`, {
         opacity: 0,
         duration: 0.3,
-        delay: 3,
+        delay: 2,
         ease: "power1.inOut",
         onComplete: showServiciosTextRandom,
       });
@@ -527,4 +517,16 @@ function showServiciosTextRandom3() {
       opacity: 0,
     })
     .timeScale(5);
+  showNav();
+  achicaDivContenedorMensajes();
+}
+
+function achicaDivContenedorMensajes() {
+  gsap.timeline().to(".contenedor-txt-mensajes-gsap", {
+    height: "0",
+    width: "0",
+    delay: 0.5,
+    duration: 1,
+    ease: "expo.in",
+  });
 }

@@ -273,16 +273,16 @@ main {
 
 #section-2 {
   z-index: 81;
-  background-color: #141e30;
-  background-image: linear-gradient(to right, #141e30, #243b55);
+  background-color: #013452;
+  background-image: linear-gradient(to right, #013452, #025382);
   top: 0px;
   left: 0px;
 }
 
 #section-1 {
   z-index: 82;
-  background-color: #141e30;
-  background-image: linear-gradient(to right, #141e30, #243b55);
+  background-color: #013452;
+  background-image: linear-gradient(to right, #013452, #025382);
   top: 0px;
   left: 0px;
 }
@@ -328,6 +328,16 @@ main {
   align-items: center;
 }
 
+.contenedor-txt-mensajes {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .txt-servicios {
   color: white;
   position: absolute;
@@ -340,8 +350,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   line-height: 4rem;
   text-align: center;
 }
@@ -351,69 +361,74 @@ main {
 }
 
 #ts-1 {
-  background: rgba(0, 0, 0, 0.7) url("../img/web-estatica.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/web-estatica.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-2 {
-  background: rgba(0, 0, 0, 0.7) url("../img/spa.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/spa.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-3 {
-  background: rgba(0, 0, 0, 0.7) url("../img/front.png");
+  background: rgba(0, 0, 0, 0.9) url("../img/front.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-4 {
-  background: rgba(0, 0, 0, 0.7) url("../img/back.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-5 {
-  background: rgba(0, 0, 0, 0.7) url("../img/api.png");
+  background: rgba(0, 0, 0, 0.9) url("../img/api.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-6 {
-  background: rgba(0, 0, 0, 0.7) url("../img/wordpress.png");
+  background: rgba(0, 0, 0, 0.9) url("../img/wordpress.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-7 {
-  background: rgba(0, 0, 0, 0.7) url("../img/disenografico.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/disenografico.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-8 {
-  background: rgba(0, 0, 0, 0.7) url("../img/brand.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/brand.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-blend-mode: overlay;
 }
 
 #ts-9 {
-  background: rgba(0, 0, 0, 0.7) url("../img/multimedia.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/multimedia.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.ts-x {
   background-blend-mode: overlay;
 }
 
@@ -465,11 +480,8 @@ main {
 }
 
 .pizarra-codigo--estilos {
-  background: rgb(6, 4, 26);
-  background: -moz-linear-gradient(340deg, rgb(6, 4, 26) 0%, rgb(15, 12, 67) 50%, rgb(8, 6, 37) 100%);
-  background: -webkit-linear-gradient(340deg, rgb(6, 4, 26) 0%, rgb(15, 12, 67) 50%, rgb(6, 4, 26) 100%);
-  background: linear-gradient(340deg, rgb(6, 4, 26) 0%, rgb(15, 12, 67) 50%, rgb(6, 4, 26) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080625",endColorstr="#080625",GradientType=1);
+  background: rgb(0, 10, 55);
+  background: linear-gradient(340deg, rgb(0, 10, 55) 0%, rgb(19, 29, 74) 50%, rgb(0, 10, 55) 100%);
   color: white;
   border-radius: 0.3em;
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
