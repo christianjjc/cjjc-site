@@ -4,6 +4,7 @@ let textoescribir = "";
 let i = 0;
 let contador_mensajes = 0;
 let contadorseundos = 0;
+
 function escribirTexto(texto, idEtiqueta, mls) {
   const textoElemento = document.getElementById(idEtiqueta);
   const cantCar = texto.length;
@@ -522,11 +523,70 @@ function showServiciosTextRandom3() {
 }
 
 function achicaDivContenedorMensajes() {
-  gsap.timeline().to(".contenedor-txt-mensajes-gsap", {
+  let tl = gsap.timeline().to(".contenedor-txt-mensajes-gsap", {
     height: "0",
     width: "0",
     delay: 0.5,
     duration: 1,
     ease: "expo.in",
+    onComplete: muestraCarouselServicios,
   });
+}
+
+function muestraCarouselServicios() {
+  let tl = gsap.timeline().to(".swiper-carousel-servicios-gsap", {
+    left: "45%",
+    delay: 0.5,
+    duration: 2,
+    ease: "back.inOut(4)",
+    //onComplete: showServiciosTextRandom3,
+  });
+  generaSwiper();
+}
+
+function generaSwiper() {
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    speed: 1000,
+    simulateTouch: true,
+    autoplay: { delay: 1000 },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 25,
+      },
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 25,
+      },
+      993: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      1240: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+    },
+    on: { realIndexChange: () => slideChange(swiper.clickedIndex), init: swiperInit },
+  });
+}
+
+function slideChange(index) {
+  console.log(index);
+}
+
+function swiperInit() {
+  console.log("iniciado");
 }
