@@ -554,6 +554,7 @@ function generaSwiper() {
     speed: 1000,
     simulateTouch: true,
     autoplay: { delay: 1000 },
+    //initialSlide: 0,
     // Navigation arrows
     navigation: {
       nextEl: ".swiper-button-next",
@@ -579,7 +580,7 @@ function generaSwiper() {
         spaceBetween: 25,
       },
     },
-    on: { realIndexChange: () => slideChange(swiper.clickedIndex), init: swiperInit },
+    on: { realIndexChange: () => console.log(swiper.realIndex), init: swiperInit },
   });
 }
 
