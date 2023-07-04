@@ -57,6 +57,22 @@ main {
   left: 0px;
 }
 
+/* 
+#section-2 {
+  z-index: 81;
+  background-color: $glb-brand-color01;
+  background-image: linear-gradient(to right, $glb-brand-color01, $glb-brand-color01-deg);
+  //background: url("../img/multimedia.jpg");
+  background: $glb-color-overlay-brand-1 url("../img/multimedia.jpg");
+  background-blend-mode: overlay;
+  background-size: cover;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+ */
+
 #section-1 {
   z-index: 82;
   background-color: $glb-brand-color01;
@@ -116,6 +132,7 @@ main {
   justify-content: center;
   align-items: center;
   color: transparent;
+  border: 0px solid $glb-brand-color-analogo-oscuro-2;
 }
 
 .txt-servicios {

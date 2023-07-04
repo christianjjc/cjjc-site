@@ -523,14 +523,23 @@ function showServiciosTextRandom3() {
 }
 
 function achicaDivContenedorMensajes() {
-  let tl = gsap.timeline().to(".contenedor-txt-mensajes-gsap", {
-    height: "0",
-    width: "0",
-    delay: 0.5,
-    duration: 1,
-    ease: "expo.in",
-    onComplete: muestraCarouselServicios,
-  });
+  let tl = gsap
+    .timeline()
+    .to(".contenedor-txt-mensajes-gsap", {
+      borderRadius: "25%",
+      border: "50",
+      height: "0",
+      width: "0",
+      delay: 0.5,
+      duration: 1,
+      ease: "expo.in",
+    })
+    .to(".contenedor-txt-mensajes-gsap", {
+      border: "0",
+      ease: "expo.in",
+      duration: 0.05,
+      onComplete: muestraCarouselServicios,
+    });
 }
 
 function muestraCarouselServicios() {
@@ -553,7 +562,7 @@ function generaSwiper() {
     loop: true,
     speed: 1000,
     simulateTouch: true,
-    autoplay: { delay: 1000 },
+    autoplay: { delay: 3000 },
     //initialSlide: 0,
     // Navigation arrows
     navigation: {
@@ -577,6 +586,10 @@ function generaSwiper() {
       },
       1240: {
         slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1921: {
+        slidesPerView: 5,
         spaceBetween: 25,
       },
     },
