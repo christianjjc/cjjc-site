@@ -54,11 +54,8 @@
 }
 
 .pizarra-codigo--estilos {
-  background: rgb(6, 4, 26);
-  background: -moz-linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgba(15, 12, 67, 1) 50%, rgba(8, 6, 37, 1) 100%);
-  background: -webkit-linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgb(15, 12, 67) 50%, rgba(6, 4, 26, 1) 100%);
-  background: linear-gradient(340deg, rgba(6, 4, 26, 1) 0%, rgba(15, 12, 67, 1) 50%, rgba(6, 4, 26, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080625",endColorstr="#080625",GradientType=1);
+  background: rgb(0, 10, 55);
+  background: linear-gradient(340deg, rgba(0, 10, 55, 1) 0%, rgba(19, 29, 74, 1) 50%, rgba(0, 10, 55, 1) 100%);
   color: white;
   border-radius: 0.3em;
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);

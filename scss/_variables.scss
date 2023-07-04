@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Exo:100");
 
-//$glb-brand-color01:#cf8827;
-//$glb-brand-color01-opacity:rgba(207, 134, 39, 0.75);
-//$glb-brand-color-negro-opaco:rgba(0,0,0,0.1);
+$glb-brand-color01: #013452;
+$glb-brand-color01-deg: #025382;
+$glb-brand-color02: #ab6c18;
+$glb-brand-color02-deg: #e89220;
+$glb-brand-color-analogo-oscuro-1: #b89211;
+$glb-brand-color-analogo-oscuro-2: #b83e11;
+$glb-brand-color-analogo-claro-1: #fcf549;
+$glb-brand-color-analogo-claro-2: #fc7d49;
+
 $glb-font-family: "Roboto Condensed", sans-serif;
 $glb-font-color-light: white;
 $glb-font-color-dark: black;
@@ -12,4 +18,5 @@ $glb-fs: 1rem;
 $glb-fs-lh: 2rem;
 $glb-fs-small: 0.9rem;
 $glb-fs-small-lh: 1.5rem;
-$glb-color-overlay: rgba(0, 0, 0, 0.7);
+$glb-color-overlay: rgba(0, 0, 0, 0.9);
+$glb-color-overlay-brand-1: rgb(1, 52, 82, 0.9);
