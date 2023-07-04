@@ -543,8 +543,25 @@ function achicaDivContenedorMensajes() {
 }
 
 function muestraCarouselServicios() {
+  const anchoViewport = window.innerWidth;
+  console.log("anchoViewport", anchoViewport);
+  let pos_left = "";
+
+  if (anchoViewport <= 767) {
+    pos_left = "5%";
+  } else if (anchoViewport <= 1024) {
+    pos_left = "25%";
+  } else if (anchoViewport <= 1920) {
+    pos_left = "50%";
+  } else if (anchoViewport <= 2560) {
+    pos_left = "50%";
+  } else if (anchoViewport <= 3840) {
+    pos_left = "60%";
+  }
+
+  console.log("pos_left", pos_left);
   let tl = gsap.timeline().to(".swiper-carousel-servicios-gsap", {
-    left: "50%",
+    left: `${pos_left}`,
     delay: 0.5,
     duration: 2,
     ease: "back.inOut(4)",
@@ -559,7 +576,6 @@ function generaSwiper() {
     //init: false,
     direction: "horizontal",
     //slidesPerView: 3,
-    spaceBetween: 25,
     loop: true,
     speed: 1000,
     simulateTouch: true,
@@ -573,23 +589,40 @@ function generaSwiper() {
     },
     breakpoints: {
       // when window width is >= 320px
+      280: {
+        slidesPerView: 1,
+        spaceBetween: 25,
+      },
       320: {
         slidesPerView: 1,
+        spaceBetween: 25,
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 25,
       },
       768: {
-        slidesPerView: 1.5,
-      },
-      993: {
         slidesPerView: 2,
+        spaceBetween: 25,
       },
-      1240: {
+      1024: {
         slidesPerView: 3,
+        spaceBetween: 25,
       },
-      1921: {
-        slidesPerView: 5,
+      1920: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      2560: {
+        slidesPerView: 4,
+        spaceBetween: 50,
       },
     },
     on: { realIndexChange: () => cambioSlide(swiper.realIndex), init: swiperIniciado },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
 }
 
