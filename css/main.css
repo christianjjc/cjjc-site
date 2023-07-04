@@ -237,6 +237,17 @@ body {
   height: 400px;
 }
 
+.ecran-slides-servicios {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: bisque;
+  z-index: 49;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -396,7 +407,7 @@ main {
 }
 
 #ts-1 {
-  background: rgba(0, 0, 0, 0.9) url("../img/web-estatica.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide0.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -404,7 +415,7 @@ main {
 }
 
 #ts-2 {
-  background: rgba(0, 0, 0, 0.9) url("../img/spa.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -412,7 +423,7 @@ main {
 }
 
 #ts-3 {
-  background: rgba(0, 0, 0, 0.9) url("../img/front.png");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -420,7 +431,7 @@ main {
 }
 
 #ts-4 {
-  background: rgba(0, 0, 0, 0.9) url("../img/back.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -428,7 +439,7 @@ main {
 }
 
 #ts-5 {
-  background: rgba(0, 0, 0, 0.9) url("../img/api.png");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -436,7 +447,7 @@ main {
 }
 
 #ts-6 {
-  background: rgba(0, 0, 0, 0.9) url("../img/wordpress.png");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -444,7 +455,7 @@ main {
 }
 
 #ts-7 {
-  background: rgba(0, 0, 0, 0.9) url("../img/disenografico.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -452,7 +463,7 @@ main {
 }
 
 #ts-8 {
-  background: rgba(0, 0, 0, 0.9) url("../img/brand.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -460,7 +471,7 @@ main {
 }
 
 #ts-9 {
-  background: rgba(0, 0, 0, 0.9) url("../img/multimedia.jpg");
+  background: rgba(0, 0, 0, 0.9) url("../img/slide8.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
