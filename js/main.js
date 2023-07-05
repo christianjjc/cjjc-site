@@ -158,6 +158,7 @@ function showSegundo(reverse = false) {
         duration: 0.5,
         ease: "back.inOut(2)",
         onComplete: showNav,
+        fondoAboutGsap,
       });
   }
 }
@@ -488,3 +489,20 @@ function cambioSlide(i) {
 function swiperIniciado() {
   cambioSlide(0);
 }
+
+function fondoAboutGsap(reverse = false) {
+  CustomEase.create("custom", "M0,0,C0.172,0.352,0.04,0.65,0.144,0.804,0.248,0.958,0.42,0.952,1,1");
+  if (reverse) {
+  } else {
+    let tl = gsap.timeline().to(`.fondo-about-gsap`, {
+      delay: 1.5,
+      top: "0",
+      duration: 1,
+      ease: "custom",
+      //onComplete: none,
+    });
+  }
+}
+
+//ease paralax
+//CustomEase.create("custom", "M0,0,C0.172,0.352,0.04,0.65,0.144,0.804,0.248,0.958,0.42,0.952,1,1");
