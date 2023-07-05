@@ -67,8 +67,10 @@ main {
 
 #section-3 {
   z-index: 83;
-  background-color: #484815;
-  background-image: linear-gradient(to right, #484815, #92922b);
+  // background-color: #484815;
+  // background-image: linear-gradient(to right, #484815, #92922b);
+  background-color: $glb-brand-color01;
+  background-image: linear-gradient(to right, $glb-brand-color01, $glb-brand-color01-deg);
   scale: 0.9;
   top: 0px;
   left: -100vw;
@@ -76,8 +78,10 @@ main {
 
 #section-4 {
   z-index: 84;
-  background-color: #133513;
-  background-image: linear-gradient(to right, #133513, #297229);
+  // background-color: #133513;
+  // background-image: linear-gradient(to right, #133513, #297229);
+  background-color: $glb-brand-color01;
+  background-image: linear-gradient(to right, $glb-brand-color01, $glb-brand-color01-deg);
   scale: 0.9;
   top: 0px;
   left: 100vw;
@@ -85,8 +89,10 @@ main {
 
 #section-5 {
   z-index: 85;
-  background-color: #141e30;
-  background-image: linear-gradient(to right, #141e30, #243b55);
+  // background-color: #141e30;
+  // background-image: linear-gradient(to right, #141e30, #243b55);
+  background-color: $glb-brand-color01;
+  background-image: linear-gradient(to right, $glb-brand-color01, $glb-brand-color01-deg);
   scale: 0.9;
   top: -100vh;
   left: 0px;

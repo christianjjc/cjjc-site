@@ -136,8 +136,8 @@ btnContacto.addEventListener("click", () => {
 function showNav() {
   gsap.timeline().to(`#section-nav`, {
     top: "0",
-    delay: 0.5,
-    duration: 1.5,
+    delay: 0.2,
+    duration: 1,
     ease: "back.inOut(4)",
   });
 }
