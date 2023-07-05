@@ -5,87 +5,88 @@ let i = 0;
 let contador_mensajes = 0;
 let contadorseundos = 0;
 
-function escribirTexto(texto, idEtiqueta, mls) {
-  const textoElemento = document.getElementById(idEtiqueta);
-  const cantCar = texto.length;
-  const intervaloCaracter = setInterval(() => {
-    const caracter = texto.slice(i, i + 1);
-    textoescribir += caracter;
-    let nuevomensaje = textoescribir.replace("$", `<span class="dollar">$</span>`);
-    textoElemento.innerHTML = nuevomensaje;
-    i++;
-    if (i == cantCar) {
-      clearInterval(intervaloCaracter);
-      nuevomensaje = nuevomensaje.replace("Christian Jiménez C.", `<span class="dollar">Christian Jiménez C.</span>`);
-      nuevomensaje = nuevomensaje.replace("/**", `<span class="comented">/**`, "*/", `*/</span>`);
-      nuevomensaje = nuevomensaje.replace("Full Stack Javascript Developer", `<span class="dollar">Full Stack Javascript Developer</span>`);
-      textoElemento.innerHTML = nuevomensaje;
-      i = 0;
-      textoescribir = "";
-    }
-  }, mls);
-}
+// function escribirTexto(texto, idEtiqueta, mls) {
+//   const textoElemento = document.getElementById(idEtiqueta);
+//   const cantCar = texto.length;
+//   const intervaloCaracter = setInterval(() => {
+//     const caracter = texto.slice(i, i + 1);
+//     textoescribir += caracter;
+//     let nuevomensaje = textoescribir.replace("$", `<span class="dollar">$</span>`);
+//     textoElemento.innerHTML = nuevomensaje;
+//     i++;
+//     if (i == cantCar) {
+//       clearInterval(intervaloCaracter);
+//       nuevomensaje = nuevomensaje.replace("Christian Jiménez C.", `<span class="dollar">Christian Jiménez C.</span>`);
+//       nuevomensaje = nuevomensaje.replace("/**", `<span class="comented">/**`, "*/", `*/</span>`);
+//       nuevomensaje = nuevomensaje.replace("Full Stack Javascript Developer", `<span class="dollar">Full Stack Javascript Developer</span>`);
+//       textoElemento.innerHTML = nuevomensaje;
+//       i = 0;
+//       textoescribir = "";
+//     }
+//   }, mls);
+// }
 
-function frasesEscritas(cadaXsegundos, texto1, idEtiquetaNueva, mls, cursor = false, idEtiquetaAnt = "") {
-  const contenedor = document.getElementById("contenedor-mensajes");
-  code = document.createElement("code");
-  code.setAttribute("id", idEtiquetaNueva);
-  contador_mensajes == 0 && code.classList.add("typed");
-  contenedor.appendChild(code);
-  setTimeout(() => {
-    if (cursor) {
-      if (contador_mensajes > 0) {
-        const txtsale = document.getElementById(idEtiquetaAnt);
-        txtsale.classList.remove("typed");
-        const txtentra = document.getElementById(idEtiquetaNueva);
-        txtentra.classList.add("typed");
-      }
-    }
-    escribirTexto(texto1, idEtiquetaNueva, mls);
-  }, cadaXsegundos * 1000);
-  contador_mensajes++;
-}
+// function frasesEscritas(cadaXsegundos, texto1, idEtiquetaNueva, mls, cursor = false, idEtiquetaAnt = "") {
+//   const contenedor = document.getElementById("contenedor-mensajes");
+//   code = document.createElement("code");
+//   code.setAttribute("id", idEtiquetaNueva);
+//   contador_mensajes == 0 && code.classList.add("typed");
+//   contenedor.appendChild(code);
+//   setTimeout(() => {
+//     if (cursor) {
+//       if (contador_mensajes > 0) {
+//         const txtsale = document.getElementById(idEtiquetaAnt);
+//         txtsale.classList.remove("typed");
+//         const txtentra = document.getElementById(idEtiquetaNueva);
+//         txtentra.classList.add("typed");
+//       }
+//     }
+//     escribirTexto(texto1, idEtiquetaNueva, mls);
+//   }, cadaXsegundos * 1000);
+//   contador_mensajes++;
+// }
 
-function cargaMensajes() {
-  const texto1 = `$ ¡Hola! Bienvenido a mi Web Site. `;
-  const texto2 = `$ Mi nombre es Christian Jiménez C.`;
-  const texto3 = `$ /** --------------------- */`;
-  const texto4 = `$ Me desempeño como Full Stack Javascript Developer.`;
-  const texto5 = `$ A continuación, te invito a conocer más sobre mi y mis proyectos.`;
-  let summartiempo = 0;
-  frasesEscritas(summartiempo, texto1, "typed-1", 40);
-  frasesEscritas((summartiempo += 2.5), texto2, "typed-2", 40, true, "typed-1");
-  frasesEscritas((summartiempo += 2.5), texto3, "typed-3", 40, true, "typed-2");
-  frasesEscritas((summartiempo += 2.5), texto4, "typed-4", 40, true, "typed-3");
-  frasesEscritas((summartiempo += 3), texto5, "typed-5", 40, true, "typed-4");
-  setTimeout(() => {
-    agrandaPizarra();
-  }, (summartiempo + 4) * 1000);
-}
+// function cargaMensajes() {
+//   const texto1 = `$ ¡Hola! Bienvenido a mi Web Site. `;
+//   const texto2 = `$ Mi nombre es Christian Jiménez C.`;
+//   const texto3 = `$ /** --------------------- */`;
+//   const texto4 = `$ Me desempeño como Full Stack Javascript Developer.`;
+//   const texto5 = `$ A continuación, te invito a conocer más sobre mi y mis proyectos.`;
+//   let summartiempo = 0;
+//   frasesEscritas(summartiempo, texto1, "typed-1", 40);
+//   frasesEscritas((summartiempo += 2.5), texto2, "typed-2", 40, true, "typed-1");
+//   frasesEscritas((summartiempo += 2.5), texto3, "typed-3", 40, true, "typed-2");
+//   frasesEscritas((summartiempo += 2.5), texto4, "typed-4", 40, true, "typed-3");
+//   frasesEscritas((summartiempo += 3), texto5, "typed-5", 40, true, "typed-4");
+//   setTimeout(() => {
+//     agrandaPizarra();
+//   }, (summartiempo + 4) * 1000);
+// }
 
 function iniciaPagina() {
-  const divBotonera = document.querySelector("#botonera");
-  const divPizarra = document.getElementById("pizarra-codigo");
+  // const divBotonera = document.querySelector("#botonera");
+  // const divPizarra = document.getElementById("pizarra-codigo");
   const divPrecarga = document.getElementById("precarga");
 
   setTimeout(() => {
     divPrecarga.classList.add("oculto");
+    showProfileCard();
   }, 5500);
 
-  setTimeout(() => {
-    divPizarra.classList.add("pizarra-animate--height");
-    divPizarra.classList.add("pizarra-codigo--estilos");
-    divBotonera.classList.toggle("oculto");
-  }, 6000);
+  // setTimeout(() => {
+  //   divPizarra.classList.add("pizarra-animate--height");
+  //   divPizarra.classList.add("pizarra-codigo--estilos");
+  //   divBotonera.classList.toggle("oculto");
+  // }, 6000);
 
-  setTimeout(() => {
-    cargaMensajes();
-  }, 7000);
+  // setTimeout(() => {
+  //   cargaMensajes();
+  // }, 7000);
 
-  setTimeout(() => {
-    divPizarra.classList.remove("pizarra-animate--height");
-    divPizarra.classList.add("height-auto");
-  }, 8000);
+  // setTimeout(() => {
+  //   divPizarra.classList.remove("pizarra-animate--height");
+  //   divPizarra.classList.add("height-auto");
+  // }, 8000);
 }
 
 iniciaPagina();
@@ -139,6 +140,49 @@ function showNav() {
     delay: 0.2,
     duration: 1,
     ease: "back.inOut(4)",
+  });
+}
+
+function showProfileCard() {
+  gsap.timeline().to(`.contenedor-card`, {
+    top: "50%",
+    duration: 2,
+    ease: "back.inOut(2)",
+    onComplete: puntosGsap,
+    flipProfileCard,
+  });
+}
+
+function flipProfileCard() {
+  gsap
+    .timeline({
+      delay: 10,
+      duration: 0.1,
+    })
+    .to(`.card-front`, {
+      rotateX: "-180deg",
+      ease: "power2.in",
+    });
+
+  gsap
+    .timeline({
+      delay: 10,
+      duration: 0.1,
+    })
+    .to(`.card-back`, {
+      rotateX: "0deg",
+      ease: "power2.in",
+    });
+}
+
+function puntosGsap() {
+  gsap.timeline().to(`.puntos-gsap`, {
+    opacity: 1,
+    ease: "power1.in",
+    stagger: {
+      amount: 1.5,
+    },
+    repeat: 4,
   });
 }
 
