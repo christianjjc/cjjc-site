@@ -544,9 +544,7 @@ function achicaDivContenedorMensajes() {
 
 function muestraCarouselServicios() {
   const anchoViewport = window.innerWidth;
-  console.log("anchoViewport", anchoViewport);
   let pos_left = "";
-
   if (anchoViewport <= 767) {
     pos_left = "5%";
   } else if (anchoViewport <= 1024) {
@@ -558,8 +556,6 @@ function muestraCarouselServicios() {
   } else if (anchoViewport <= 3840) {
     pos_left = "60%";
   }
-
-  console.log("pos_left", pos_left);
   let tl = gsap.timeline().to(".swiper-carousel-servicios-gsap", {
     left: `${pos_left}`,
     delay: 0.5,
