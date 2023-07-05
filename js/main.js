@@ -103,26 +103,26 @@ btnAcceder.addEventListener("click", () => {
   showSegundo();
 });
 
-const btnServicios = document.querySelector("#btn-servicios");
-btnServicios.addEventListener("click", () => {
-  menuElegido(btnServicios);
+const btnAbout = document.querySelector("#btn-about");
+btnAbout.addEventListener("click", () => {
+  menuElegido(btnAbout);
   showQuinto(true);
   showCuarto(true);
   showTercero(true);
   showSegundo();
 });
 
-const btnPortafolio = document.querySelector("#btn-portafolio");
-btnPortafolio.addEventListener("click", () => {
-  menuElegido(btnPortafolio);
+const btnServicios = document.querySelector("#btn-servicios");
+btnServicios.addEventListener("click", () => {
+  menuElegido(btnServicios);
   showQuinto(true);
   showCuarto(true);
   showTercero();
 });
 
-const btnAbout = document.querySelector("#btn-about");
-btnAbout.addEventListener("click", () => {
-  menuElegido(btnAbout);
+const btnPortafolio = document.querySelector("#btn-portafolio");
+btnPortafolio.addEventListener("click", () => {
+  menuElegido(btnPortafolio);
   showQuinto(true);
   showCuarto();
 });
@@ -136,9 +136,9 @@ btnContacto.addEventListener("click", () => {
 function showNav() {
   gsap.timeline().to(`#section-nav`, {
     top: "0",
-    delay: 2,
+    delay: 0.5,
     duration: 1.5,
-    ease: "back.inOut(2)",
+    ease: "back.inOut(4)",
   });
 }
 
@@ -157,7 +157,7 @@ function showSegundo(reverse = false) {
         top: "-100vh",
         duration: 0.5,
         ease: "back.inOut(2)",
-        onComplete: showServiciosText,
+        onComplete: showNav,
       });
   }
 }
@@ -189,6 +189,7 @@ function showTercero(reverse = false) {
         scale: "1",
         duration: 0.75,
         ease: "power1.inOut",
+        onComplete: showServiciosText,
       });
   }
 }
@@ -296,7 +297,7 @@ function showServiciosText() {
         scale: "1",
         opacity: 1,
         duration: 0.7,
-        delay: 0.5,
+        delay: 0.3,
         ease: "power1.inOut",
       })
       .to(`.txt-servicios-pregunta`, {
@@ -312,144 +313,59 @@ function showServiciosText() {
 
 function showServiciosTextRandom() {
   const divTextos = document.querySelectorAll(".txt-show-random");
+  const de = 0.2;
+  const ds = 0.5;
   let tl = gsap
     .timeline({
       defaults: {
-        duration: 0.5,
+        //duration: 0.5,
         ease: "power1.inOut",
       },
     })
-    .to(`#${divTextos[0].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[0].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[1].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[1].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[2].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[2].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[3].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[3].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[4].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[4].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[5].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[5].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[6].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[6].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[7].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[7].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[8].id}`, {
-      scale: 1,
-      opacity: 1,
-    })
-    .to(`#${divTextos[8].id}`, {
-      opacity: 0,
-      onComplete: showServiciosTextRandom2,
-    });
+    .to(`#${divTextos[0].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[0].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[1].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[1].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[2].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[2].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[3].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[3].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[4].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[4].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[5].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[5].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[6].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[6].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[7].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[7].id}`, { duration: ds, opacity: 0 })
+    .to(`#${divTextos[8].id}`, { duration: de, scale: 1, opacity: 1 })
+    .to(`#${divTextos[8].id}`, { duration: ds, opacity: 0, onComplete: showServiciosTextRandom2 });
 }
 
 function showServiciosTextRandom2() {
   const divTextos = document.querySelectorAll(".txt-show-random");
   let tl = gsap
     .timeline({
-      //repeat: 1,
-      defaults: {
-        duration: 0.5,
-        //ease: "power1.inOut",
-      },
+      defaults: { duration: 0.4 },
     })
-    .to(`#${divTextos[0].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[0].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[1].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[1].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[2].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[2].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[3].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[3].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[4].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[4].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[5].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[5].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[6].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[6].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[7].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[7].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[8].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[8].id}`, {
-      opacity: 0,
-      onComplete: showServiciosTextRandom3,
-    })
+    .to(`#${divTextos[0].id}`, { opacity: 1 })
+    .to(`#${divTextos[0].id}`, { opacity: 0 })
+    .to(`#${divTextos[1].id}`, { opacity: 1 })
+    .to(`#${divTextos[1].id}`, { opacity: 0 })
+    .to(`#${divTextos[2].id}`, { opacity: 1 })
+    .to(`#${divTextos[2].id}`, { opacity: 0 })
+    .to(`#${divTextos[3].id}`, { opacity: 1 })
+    .to(`#${divTextos[3].id}`, { opacity: 0 })
+    .to(`#${divTextos[4].id}`, { opacity: 1 })
+    .to(`#${divTextos[4].id}`, { opacity: 0 })
+    .to(`#${divTextos[5].id}`, { opacity: 1 })
+    .to(`#${divTextos[5].id}`, { opacity: 0 })
+    .to(`#${divTextos[6].id}`, { opacity: 1 })
+    .to(`#${divTextos[6].id}`, { opacity: 0 })
+    .to(`#${divTextos[7].id}`, { opacity: 1 })
+    .to(`#${divTextos[7].id}`, { opacity: 0 })
+    .to(`#${divTextos[8].id}`, { opacity: 1 })
+    .to(`#${divTextos[8].id}`, { opacity: 0, onComplete: showServiciosTextRandom3 })
     .timeScale(6);
 }
 
@@ -458,67 +374,27 @@ function showServiciosTextRandom3() {
   let tl = gsap
     .timeline({
       repeat: 4,
-      defaults: {
-        duration: 0.1,
-        //ease: "power1.inOut",
-      },
+      defaults: { duration: 0.1 },
     })
-    .to(`#${divTextos[0].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[0].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[1].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[1].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[2].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[2].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[3].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[3].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[4].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[4].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[5].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[5].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[6].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[6].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[7].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[7].id}`, {
-      opacity: 0,
-    })
-    .to(`#${divTextos[8].id}`, {
-      opacity: 1,
-    })
-    .to(`#${divTextos[8].id}`, {
-      opacity: 0,
-    })
+    .to(`#${divTextos[0].id}`, { opacity: 1 })
+    .to(`#${divTextos[0].id}`, { opacity: 0 })
+    .to(`#${divTextos[1].id}`, { opacity: 1 })
+    .to(`#${divTextos[1].id}`, { opacity: 0 })
+    .to(`#${divTextos[2].id}`, { opacity: 1 })
+    .to(`#${divTextos[2].id}`, { opacity: 0 })
+    .to(`#${divTextos[3].id}`, { opacity: 1 })
+    .to(`#${divTextos[3].id}`, { opacity: 0 })
+    .to(`#${divTextos[4].id}`, { opacity: 1 })
+    .to(`#${divTextos[4].id}`, { opacity: 0 })
+    .to(`#${divTextos[5].id}`, { opacity: 1 })
+    .to(`#${divTextos[5].id}`, { opacity: 0 })
+    .to(`#${divTextos[6].id}`, { opacity: 1 })
+    .to(`#${divTextos[6].id}`, { opacity: 0 })
+    .to(`#${divTextos[7].id}`, { opacity: 1 })
+    .to(`#${divTextos[7].id}`, { opacity: 0 })
+    .to(`#${divTextos[8].id}`, { opacity: 1 })
+    .to(`#${divTextos[8].id}`, { opacity: 0 })
     .timeScale(5);
-  showNav();
   achicaDivContenedorMensajes();
 }
 
@@ -526,8 +402,8 @@ function achicaDivContenedorMensajes() {
   let tl = gsap
     .timeline()
     .to(".contenedor-txt-mensajes-gsap", {
-      borderRadius: "25%",
-      border: "50",
+      borderRadius: "5%",
+      border: "5",
       height: "0",
       width: "0",
       delay: 0.5,
@@ -573,7 +449,7 @@ function generaSwiper() {
     direction: "horizontal",
     //slidesPerView: 3,
     loop: true,
-    speed: 1000,
+    speed: 2000,
     simulateTouch: true,
     initialSlide: 0,
     autoplay: { delay: 3000 },
@@ -585,40 +461,16 @@ function generaSwiper() {
     },
     breakpoints: {
       // when window width is >= 320px
-      280: {
-        slidesPerView: 1,
-        spaceBetween: 25,
-      },
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 25,
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 25,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 25,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 25,
-      },
-      1920: {
-        slidesPerView: 3,
-        spaceBetween: 25,
-      },
-      2560: {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
+      280: { slidesPerView: 1, spaceBetween: 25 },
+      320: { slidesPerView: 1, spaceBetween: 25 },
+      480: { slidesPerView: 1, spaceBetween: 25 },
+      768: { slidesPerView: 2, spaceBetween: 25 },
+      1024: { slidesPerView: 3, spaceBetween: 25 },
+      1920: { slidesPerView: 3, spaceBetween: 25 },
+      2560: { slidesPerView: 4, spaceBetween: 50 },
     },
     on: { realIndexChange: () => cambioSlide(swiper.realIndex), init: swiperIniciado },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+    pagination: { el: ".swiper-pagination", clickable: true },
   });
 }
 
@@ -628,18 +480,9 @@ function cambioSlide(i) {
       //paused: true,
       defaults: { duration: 1 },
     })
-    .to(".ecran-slides-servicios-gsap", {
-      opacity: 0,
-      duration: 0.25,
-      ease: "power4.in",
-    })
+    .to(".ecran-slides-servicios-gsap", { opacity: 0, duration: 0.25, ease: "power4.in" })
     .set(".ecran-slides-servicios-gsap", { css: { backgroundImage: `url(./img/slide${i}.jpg)` } })
-    .to(".ecran-slides-servicios-gsap", {
-      opacity: 1,
-      duration: 0.25,
-      ease: "power4.out",
-    });
-  console.log(i);
+    .to(".ecran-slides-servicios-gsap", { opacity: 1, duration: 0.25, ease: "power4.out" });
 }
 
 function swiperIniciado() {
