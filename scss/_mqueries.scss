@@ -7,7 +7,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (min-width: 320px) and (max-width: 359px) {
   .nav-menu-1 {
     font-size: 12px;
     li {
@@ -16,15 +16,37 @@
   }
 }
 
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  .nav-menu-1 {
+    font-size: 12px;
+    li {
+      margin: 10px 7px;
+    }
+  }
+  .ocultar-img {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .nav-menu-1 li {
     margin: 10px 10px;
   }
+  .ocultar-img {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .br-oculto {
+    display: block;
+  }
+  .ocultar-img {
+    display: block;
+  }
+
   .card-1 {
-    @include dimensions(700px, 200px);
+    @include dimensions(700px, 170px);
   }
 
   .badgescard {
@@ -65,8 +87,14 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1239px) {
+  .br-oculto {
+    display: block;
+  }
+  .ocultar-img {
+    display: block;
+  }
   .card-1 {
-    @include dimensions(700px, 200px);
+    @include dimensions(700px, 170px);
   }
 
   .contenedor-card {
@@ -105,8 +133,16 @@
 }
 
 @media screen and (min-width: 1240px) and (max-width: 2559px) {
+  .br-oculto {
+    display: block;
+  }
+
+  .ocultar-img {
+    display: block;
+  }
+
   .card-1 {
-    @include dimensions(700px, 200px);
+    @include dimensions(700px, 170px);
   }
 
   .contenedor-card {
@@ -145,8 +181,14 @@
 }
 
 @media screen and (min-width: 2560px) {
+  .br-oculto {
+    display: block;
+  }
+  .ocultar-img {
+    display: block;
+  }
   .card-1 {
-    @include dimensions(700px, 200px);
+    @include dimensions(700px, 170px);
   }
 
   .contenedor-card {

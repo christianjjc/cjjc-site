@@ -148,7 +148,7 @@ function showTercero(reverse = false) {
         ease: "power4.inOut",
       })
       .to(`#section-3`, {
-        left: "-100vw",
+        left: "-150vw",
         duration: 0.5,
         ease: "power4.inOut",
       });
@@ -396,10 +396,11 @@ function achicaDivContenedorMensajes() {
 
 function muestraCarouselServicios() {
   let pos_left = "";
-  if (GLB_ANCHO_VIEWPORT <= 767) {
+  /*   if (GLB_ANCHO_VIEWPORT <= 767) {
     pos_left = "5%";
-  } else if (GLB_ANCHO_VIEWPORT <= 1024) {
-    pos_left = "25%";
+  } else  */
+  if (GLB_ANCHO_VIEWPORT <= 1024) {
+    pos_left = "5%";
   } else if (GLB_ANCHO_VIEWPORT <= 1920) {
     pos_left = "50%";
   } else if (GLB_ANCHO_VIEWPORT <= 2560) {
@@ -469,7 +470,7 @@ function fondoAboutGsap(reverse = false) {
   if (reverse) {
   } else {
     let tl = gsap.timeline().to(`.fondo-about-gsap`, {
-      delay: 1.5,
+      //delay: 1.5,
       top: "0",
       duration: 1,
       ease: "custom",
@@ -482,11 +483,19 @@ function fondoAboutGsap(reverse = false) {
 //CustomEase.create("custom", "M0,0,C0.172,0.352,0.04,0.65,0.144,0.804,0.248,0.958,0.42,0.952,1,1");
 
 function showProfileAbout() {
-  let top_ = 0;
-  if (GLB_ANCHO_VIEWPORT < 768) {
-    top_ = "270";
+  const top_profileCard_ = gsap.getProperty("#section-nav", "height") + 20;
+  const top_badggescard_ = gsap.getProperty(".contenedor-profile-card-gsap", "height") + 10;
+  let left = 0;
+  if (GLB_ANCHO_VIEWPORT < 320) {
+    left_ = "-200";
+  } else if (GLB_ANCHO_VIEWPORT < 360) {
+    left_ = "-150";
+  } else if (GLB_ANCHO_VIEWPORT < 390) {
+    left_ = "-160";
+  } else if (GLB_ANCHO_VIEWPORT < 768) {
+    left_ = "-151";
   } else {
-    top_ = "210";
+    left_ = "-70";
   }
   let tl1 = gsap.timeline().to(".contenedor-profile-card-gsap", {
     opacity: 1,
@@ -497,21 +506,21 @@ function showProfileAbout() {
   let tl2 = gsap
     .timeline()
     .to(".contenedor-profile-card-gsap", {
-      top: "10%",
+      top: top_profileCard_,
       duration: 1,
       ease: "back.inOut(1)",
       //onComplete: none,
     })
     .to(".cuadrado-rotado", {
-      left: "-100%;",
+      left: left_,
       duration: 1,
       ease: "back.inOut(2)",
       //onComplete: none,
     });
   let tl3 = gsap.timeline().to(".badgescard-gsap", {
     //bottom: "-120",
-    top: top_,
-    delay: 0.2,
+    top: top_badggescard_,
+    delay: 0.5,
     duration: 1,
     ease: "back.inOut(4)",
     //onComplete: none,

@@ -551,7 +551,7 @@ code, .card .line-numbers {
 
 .card-1 {
   width: 100%;
-  min-height: 250px;
+  min-height: 170px;
   padding: 20px;
   border-radius: 3px;
   background-color: white;
@@ -574,7 +574,7 @@ code, .card .line-numbers {
 
 .contenedor-profile-card {
   position: absolute;
-  top: -50%;
+  top: 100vh;
   left: 50%;
   transform: translate(-50%);
   opacity: 0;
@@ -583,12 +583,12 @@ code, .card .line-numbers {
 
 .cuadrado-rotado {
   display: block;
-  width: 250px;
-  height: 500px;
+  width: 270px;
+  height: 580px;
   background: cadetblue;
   position: absolute;
   top: -40%;
-  left: -100%;
+  left: -150%;
   transform: rotate(-30deg);
 }
 
@@ -636,9 +636,17 @@ code, .card .line-numbers {
 }
 .firstinfo .profileinfo p.bio {
   padding: 10px 0px;
-  color: #5a5a5a;
-  line-height: 1.2;
+  color: #000000;
+  line-height: 1;
   font-style: initial;
+}
+
+.br-oculto {
+  display: none;
+}
+
+.ocultar-img {
+  display: none;
 }
 
 /* @keyframes animatop {
@@ -783,7 +791,6 @@ code, .card .line-numbers {
   width: 95%;
   position: absolute;
   top: 100vh;
-  background-color: rgba(250, 235, 215, 0.3);
 }
 
 form {
@@ -1154,7 +1161,7 @@ span a {
     margin: 10px 3px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (min-width: 320px) and (max-width: 359px) {
   .nav-menu-1 {
     font-size: 12px;
   }
@@ -1162,15 +1169,35 @@ span a {
     margin: 10px 7px;
   }
 }
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  .nav-menu-1 {
+    font-size: 12px;
+  }
+  .nav-menu-1 li {
+    margin: 10px 7px;
+  }
+  .ocultar-img {
+    display: block;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .nav-menu-1 li {
     margin: 10px 10px;
   }
+  .ocultar-img {
+    display: block;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .br-oculto {
+    display: block;
+  }
+  .ocultar-img {
+    display: block;
+  }
   .card-1 {
     width: 700px;
-    min-height: 200px;
+    min-height: 170px;
   }
   .badgescard {
     width: 680px;
@@ -1202,9 +1229,15 @@ span a {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1239px) {
+  .br-oculto {
+    display: block;
+  }
+  .ocultar-img {
+    display: block;
+  }
   .card-1 {
     width: 700px;
-    min-height: 200px;
+    min-height: 170px;
   }
   .contenedor-card {
     width: 500px;
@@ -1236,9 +1269,15 @@ span a {
   }
 }
 @media screen and (min-width: 1240px) and (max-width: 2559px) {
+  .br-oculto {
+    display: block;
+  }
+  .ocultar-img {
+    display: block;
+  }
   .card-1 {
     width: 700px;
-    min-height: 200px;
+    min-height: 170px;
   }
   .contenedor-card {
     width: 500px;
@@ -1270,9 +1309,15 @@ span a {
   }
 }
 @media screen and (min-width: 2560px) {
+  .br-oculto {
+    display: block;
+  }
+  .ocultar-img {
+    display: block;
+  }
   .card-1 {
     width: 700px;
-    min-height: 200px;
+    min-height: 170px;
   }
   .contenedor-card {
     width: 500px;
