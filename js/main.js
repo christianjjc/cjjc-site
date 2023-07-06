@@ -473,10 +473,47 @@ function fondoAboutGsap(reverse = false) {
       top: "0",
       duration: 1,
       ease: "custom",
-      //onComplete: none,
+      onComplete: showProfileAbout,
     });
   }
 }
 
 //ease paralax
 //CustomEase.create("custom", "M0,0,C0.172,0.352,0.04,0.65,0.144,0.804,0.248,0.958,0.42,0.952,1,1");
+
+function showProfileAbout() {
+  let top_ = 0;
+  if (GLB_ANCHO_VIEWPORT < 768) {
+    top_ = "270";
+  } else {
+    top_ = "210";
+  }
+  let tl1 = gsap.timeline().to(".contenedor-profile-card-gsap", {
+    opacity: 1,
+    duration: 2,
+    ease: "power1.inOut",
+    //onComplete: none,
+  });
+  let tl2 = gsap
+    .timeline()
+    .to(".contenedor-profile-card-gsap", {
+      top: "10%",
+      duration: 1,
+      ease: "back.inOut(1)",
+      //onComplete: none,
+    })
+    .to(".cuadrado-rotado", {
+      left: "-100%;",
+      duration: 1,
+      ease: "back.inOut(2)",
+      //onComplete: none,
+    });
+  let tl3 = gsap.timeline().to(".badgescard-gsap", {
+    //bottom: "-120",
+    top: top_,
+    delay: 0.2,
+    duration: 1,
+    ease: "back.inOut(4)",
+    //onComplete: none,
+  });
+}

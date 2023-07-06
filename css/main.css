@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Exo:100");
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400";
 .circles {
   position: absolute;
   top: 0;
@@ -536,6 +537,141 @@ code, .card .line-numbers {
   color: #4dd0e1;
 }
 
+.firstinfo, .badgescard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.card-1 {
+  width: 100%;
+  min-height: 250px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  /*   &:after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 400px;
+    background: cadetblue;
+    position: absolute;
+    top: -40%;
+    left: -60%;
+    transform: rotate(-30deg);
+    //animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
+  } */
+}
+
+.contenedor-profile-card {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  width: 100%;
+}
+
+.cuadrado-rotado {
+  display: block;
+  width: 250px;
+  height: 500px;
+  background: cadetblue;
+  position: absolute;
+  top: -40%;
+  left: -100%;
+  transform: rotate(-30deg);
+}
+
+.badgescard {
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #ececec;
+  width: 95%;
+  height: 100px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: -1;
+  bottom: 10px;
+}
+.badgescard i {
+  font-size: 1.6em;
+  margin: 0px 6px;
+  opacity: 0.6;
+}
+
+.badgescard-flex {
+  flex-wrap: wrap;
+}
+
+.firstinfo {
+  flex-direction: row;
+  z-index: 2;
+  position: relative;
+}
+.firstinfo img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.firstinfo .profileinfo {
+  padding: 0px 20px;
+}
+.firstinfo .profileinfo h1 {
+  font-size: 1.8em;
+}
+.firstinfo .profileinfo h3 {
+  font-size: 1.2em;
+  color: #009688;
+  font-style: italic;
+}
+.firstinfo .profileinfo p.bio {
+  padding: 10px 0px;
+  color: #5a5a5a;
+  line-height: 1.2;
+  font-style: initial;
+}
+
+/* @keyframes animatop {
+  0% {
+    opacity: 0;
+    bottom: -500px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+} */
+/* @keyframes animainfos {
+  0% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -42px;
+  }
+} */
+/* @keyframes rotatemagic {
+  0% {
+    opacity: 0;
+    transform: rotate(-0deg);
+    top: -24px;
+    left: -253px;
+  }
+  100% {
+    transform: rotate(-30deg);
+    top: -24px;
+    left: -78px;
+  }
+} */
 .contenedor-txt-mensajes {
   height: 100%;
   width: 100%;
@@ -644,9 +780,10 @@ code, .card .line-numbers {
 
 .fondo-about {
   height: 100%;
-  width: 100%;
+  width: 95%;
   position: absolute;
   top: 100vh;
+  background-color: rgba(250, 235, 215, 0.3);
 }
 
 form {
@@ -1031,6 +1168,14 @@ span a {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .card-1 {
+    width: 700px;
+    min-height: 200px;
+  }
+  .badgescard {
+    width: 680px;
+    height: 50px;
+  }
   .contenedor-card {
     width: 500px;
     height: 300px;
@@ -1057,9 +1202,17 @@ span a {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1239px) {
+  .card-1 {
+    width: 700px;
+    min-height: 200px;
+  }
   .contenedor-card {
     width: 500px;
     height: 300px;
+  }
+  .badgescard {
+    width: 680px;
+    height: 50px;
   }
   .card-front, .card-back {
     padding: 0;
@@ -1083,9 +1236,17 @@ span a {
   }
 }
 @media screen and (min-width: 1240px) and (max-width: 2559px) {
+  .card-1 {
+    width: 700px;
+    min-height: 200px;
+  }
   .contenedor-card {
     width: 500px;
     height: 300px;
+  }
+  .badgescard {
+    width: 680px;
+    height: 50px;
   }
   .card-front, .card-back {
     padding: 0;
@@ -1109,9 +1270,17 @@ span a {
   }
 }
 @media screen and (min-width: 2560px) {
+  .card-1 {
+    width: 700px;
+    min-height: 200px;
+  }
   .contenedor-card {
     width: 500px;
     height: 300px;
+  }
+  .badgescard {
+    width: 680px;
+    height: 50px;
   }
   .card-front, .card-back {
     padding: 0;
