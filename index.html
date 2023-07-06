@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrsitian Jiménez C. ::: Site</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -26,20 +25,54 @@
         </section>
         <section id="section-1" class="section-pagina setcion-1"><!-- absoluto -->
             <div class="div-relativo"><!-- relativo -->
-                <div id="pizarra-codigo" class="no-blurreado"> <!-- absoluto -->
-                    <div id="botonera" class="btn oculto">
-                        <div class="btn-cierra a"> </div>
-                        <div class="btn-cierra b"></div>
-                        <div class="btn-cierra c"></div>
-                    </div>
-                    <div id="contenedor-mensajes" class="codigo">
-                    </div>
-                    <div id="menu-botones-1" class="botones-menu">
-                        <div id="btn-acceder" class="pure-button fuller-button white">
-                            Acceder
+                <div class="contenedor-card">
+                    <div class="card">
+                        <div class="card-back">
+                            <div class="line-numbers">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                            </div>
+                            <code>
+                                <span class="variable">const </span><span class="function">acercaDeMi </span><span class="operator">= </span><span>{</span>
+                                <div class="indent"> <span class="property">nombre</span><span class="operator">: </span><span class="string">'Christian Jiménez'</span><span>,</span></div>
+                                <div class="indent"> <span class="property">profesion</span><span class="operator">: </span><span class="string">'Full Stack JS Developer Jr.'</span><span>,</span></div>
+                                <div class="indent"> <span class="property">contacto</span><span class="operator">: </span><span>{</span>
+                                <div class="indent"> <span class="property">correo</span><span class="operator">: </span><span class="string">'chrsitianjjc@cjjc.pe'</span><span>,</span></div>
+                                <div class="indent"> <span class="property">website</span><span class="operator">: </span><span class="string">'www.cjjc.pe'</span></div><span>}</span>
+                                </div><span>}</span>
+                                <div id="btn-acceder" class="pure-button fuller-button white btn-ingresar-card" >Ingresar</div>
+                            </code>
+                        </div>
+                        <div class="card-front">
+                            <div class="line-numbers">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                            </div>
+                            <code><span class="variable">this</span><span>.</span><span class="method">addEventListener</span><span>(</span><span class="string">'mouseover'</span><span>, </span><span class="function">() => </span><span>{ </span>
+                            <div class="indent"><span class="variable">this</span><span>.</span><span class="property">giraTarjeta </span><span>= </span><span class="boolean">true</span><span>;</span></div><span>});</span>
+                        
+                            <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+                                <div><span class="puntos-gsap">.</span><span class="puntos-gsap">.</span><span class="puntos-gsap">.</span></div>
+                        </code>
                         </div>
                     </div>
                 </div>
+
+
             </div>
             <ul class="circles">
                 <li></li>
@@ -57,48 +90,7 @@
         <section id="section-2" class="section-pagina setcion-2"><!-- absoluto -->
             <div class="div-relativo  section-flex"><!-- relativo -->
                 <div class="fondo-about fondo-about-gsap">
-                    <div class="contenedor-card">
-                        <div class="card">
-                            <div class="card-back">
-                                <div class="line-numbers">
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                    <div>4</div>
-                                    <div>5</div>
-                                    <div>6</div>
-                                    <div>7</div>
-                                    <div>8</div>
-                                    <div>9</div>
-                                </div>
-                                <code>
-                                    <span class="variable">const </span><span class="function">acercaDeMi </span><span class="operator">= </span><span>{</span>
-                                    <div class="indent"> <span class="property">nombre</span><span class="operator">: </span><span class="string">'Christian Jiménez'</span><span>,</span></div>
-                                    <div class="indent"> <span class="property">titulo</span><span class="operator">: </span><span class="string">'Full Stack JS Developer Jr.'</span><span>,</span></div>
-                                    <div class="indent"> <span class="property">contacto</span><span class="operator">: </span><span>{</span>
-                                    <div class="indent"> <span class="property">correo</span><span class="operator">: </span><span class="string">'chrsitianjjc@cjjc.pe'</span><span>,</span></div>
-                                    <div class="indent"><span class="property">website</span><span class="operator">:</span><span class="string">'www.cjjc.pe'</span></div><span>}</span>
-                                    </div><span>}</span>
-                                </code>
-                                <div>Ingresar</div>
-                            </div>
-                            <div class="card-front">
-                                <div class="line-numbers">
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                    <div>4</div>
-                                    <div>5</div>
-                                    <div>6</div>
-                                    <div>7</div>
-                                    <div>8</div>
-                                    <div>9</div>
-                                </div>
-                                <code><span class="variable">this</span><span>.</span><span class="method">addEventListener</span><span>(</span><span class="string">'mouseover'</span><span>, </span><span class="function">() => </span><span>{ </span>
-                                <div class="indent"><span class="variable">this</span><span>.</span><span class="property">giraTarjeta </span><span>= </span><span class="boolean">true</span><span>;</span></div><span>});</span></code>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <ul class="circles">

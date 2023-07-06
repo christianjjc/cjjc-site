@@ -2,7 +2,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  //margin-right: -50%;
   transform: translate(-50%, -50%) translateY($transY) translateX($transX);
 }
 
@@ -14,9 +13,6 @@
   line-height: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  //font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  //font-weight: 300;
-  //font-style: normal;
 }
 
 .nombre {
@@ -28,50 +24,8 @@
   margin-bottom: 40px;
 }
 
-.btn {
-  display: flex;
-  flex-direction: row;
-  padding: 0px;
-  margin-bottom: 20px;
-  gap: 10px;
-}
-
-.btn-cierra {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.btn-cierra.a {
-  background: rgb(243, 79, 79);
-}
-
-.btn-cierra.b {
-  background: orange;
-}
-.btn-cierra.c {
-  background: rgb(48, 150, 48);
-}
-
-.pizarra-codigo--estilos {
-  background: rgb(0, 10, 55);
-  background: linear-gradient(340deg, rgba(0, 10, 55, 1) 0%, rgba(19, 29, 74, 1) 50%, rgba(0, 10, 55, 1) 100%);
-  color: white;
-  border-radius: 0.3em;
-  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
-  padding: 20px;
-  @include absolute-centrado(0, 0);
-}
-
-.height-auto {
-  height: auto;
-  width: 90%;
-}
-
 @mixin latido-1 {
-  //position: absolute;
   animation: fadeInOut 2s infinite;
-  /*animation-iteration-count: 3;  Repetir 5 veces */
   animation-fill-mode: forwards;
 }
 
@@ -88,11 +42,12 @@
 .oculto {
   display: none;
 }
+
 .flex {
   display: flex;
 }
 
-.blurreado {
+/* .blurreado {
   filter: blur(3px) brightness(25%);
   transition: filter 0.5s ease;
 }
@@ -100,7 +55,7 @@
 .no-blurreado {
   filter: blur(0px) brightness(100%);
   transition: filter 0.5s ease;
-}
+} */
 
 @keyframes fadeInOut {
   0% {
@@ -112,50 +67,6 @@
   100% {
     opacity: 0;
   }
-}
-
-.typed {
-  position: relative;
-  display: inline-block;
-}
-
-.typed:after {
-  content: "|";
-  position: absolute;
-  opacity: 1;
-  animation: cursor-blink 0.3s infinite;
-}
-
-.codigo {
-  /* background-color: #f1f1f1; */
-  font-family: monospace;
-  font-size: $glb-fs-small;
-  line-height: $glb-fs-small-lh;
-  display: flex;
-  flex-direction: column;
-}
-
-.botones-menu {
-  opacity: 0;
-  display: none;
-  margin-top: 30px;
-  font-family: monospace;
-  font-size: $glb-fs-small !important;
-  line-height: $glb-fs-small-lh !important;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.dollar {
-  color: yellow;
-}
-
-.comented {
-  //color: #767676;
-  color: #00a756;
 }
 
 @keyframes cursor-blink {
