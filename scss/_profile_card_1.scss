@@ -31,6 +31,8 @@ $monospace: Consolas, "Lucida Console", monospace;
   top: 200vh;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 95%;
+  height: 70%;
 }
 
 .puntos-gsap {
@@ -44,8 +46,10 @@ code {
 
 .card {
   position: relative;
-  width: 30rem;
-  height: 18rem;
+  width: 100%;
+  height: 100%;
+  // width: 30rem;
+  // height: 18rem;
   perspective: 150rem;
   &-front,
   &-back {
@@ -62,6 +66,7 @@ code {
     //transform-origin: left center;
     backface-visibility: hidden;
     overflow: hidden;
+    padding: 0px 10px 0px 35px;
     &:before,
     &:after {
       position: absolute;
