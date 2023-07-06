@@ -1,4 +1,5 @@
 let GLB_SW_MENSAJES_SERVICIOS = false;
+const GLB_ANCHO_VIEWPORT = window.innerWidth;
 let sw = true;
 let textoescribir = "";
 let i = 0;
@@ -154,25 +155,31 @@ function showProfileCard() {
 }
 
 function flipProfileCard() {
-  gsap
+  let delay_ = 5;
+  let tl1 = gsap
     .timeline({
-      delay: 10,
+      paused: true,
       duration: 0.1,
+      delay: delay_,
     })
     .to(`.card-front`, {
       rotateX: "-180deg",
       ease: "power2.in",
     });
-
-  gsap
+  let tl2 = gsap
     .timeline({
-      delay: 10,
+      paused: true,
       duration: 0.1,
+      delay: delay_,
     })
     .to(`.card-back`, {
       rotateX: "0deg",
       ease: "power2.in",
     });
+  if (GLB_ANCHO_VIEWPORT <= 1024) {
+    tl1.play();
+    tl2.play();
+  }
 }
 
 function puntosGsap() {
@@ -464,17 +471,16 @@ function achicaDivContenedorMensajes() {
 }
 
 function muestraCarouselServicios() {
-  const anchoViewport = window.innerWidth;
   let pos_left = "";
-  if (anchoViewport <= 767) {
+  if (GLB_ANCHO_VIEWPORT <= 767) {
     pos_left = "5%";
-  } else if (anchoViewport <= 1024) {
+  } else if (GLB_ANCHO_VIEWPORT <= 1024) {
     pos_left = "25%";
-  } else if (anchoViewport <= 1920) {
+  } else if (GLB_ANCHO_VIEWPORT <= 1920) {
     pos_left = "50%";
-  } else if (anchoViewport <= 2560) {
+  } else if (GLB_ANCHO_VIEWPORT <= 2560) {
     pos_left = "50%";
-  } else if (anchoViewport <= 3840) {
+  } else if (GLB_ANCHO_VIEWPORT <= 3840) {
     pos_left = "60%";
   }
   let tl = gsap.timeline().to(".swiper-carousel-servicios-gsap", {
