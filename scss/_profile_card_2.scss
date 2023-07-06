@@ -29,7 +29,7 @@ $maincolor: #009688;
 }
 
 .card-1 {
-  @include dimensions(100%, 250px);
+  @include dimensions(100%, 170px);
   padding: 20px;
   border-radius: 3px;
   background-color: white;
@@ -53,7 +53,7 @@ $maincolor: #009688;
 
 .contenedor-profile-card {
   position: absolute;
-  top: -50%;
+  top: 100vh;
   left: 50%;
   transform: translate(-50%);
   opacity: 0;
@@ -62,12 +62,12 @@ $maincolor: #009688;
 
 .cuadrado-rotado {
   display: block;
-  width: 250px;
-  height: 500px;
+  width: 270px;
+  height: 580px;
   background: cadetblue;
   position: absolute;
   top: -40%;
-  left: -100%;
+  left: -150%;
   transform: rotate(-30deg);
 }
 
@@ -117,11 +117,19 @@ $maincolor: #009688;
     }
     p.bio {
       padding: 10px 0px;
-      color: #5a5a5a;
-      line-height: 1.2;
+      color: #000000;
+      line-height: 1;
       font-style: initial;
     }
   }
+}
+
+.br-oculto {
+  display: none;
+}
+
+.ocultar-img {
+  display: none;
 }
 
 /* @keyframes animatop {
