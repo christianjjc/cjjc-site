@@ -7,11 +7,14 @@ let contador_mensajes = 0;
 let contadorseundos = 0;
 
 function iniciaPagina() {
-  const divPrecarga = document.getElementById("precarga");
   setTimeout(() => {
-    divPrecarga.classList.add("oculto");
-    showProfileCard();
-  }, 5500);
+    let tl = gsap.timeline().to(`#precarga`, {
+      opacity: 0,
+      duration: 0.5,
+      ease: "power1.inOut",
+      onComplete: showProfileCard,
+    });
+  }, 4000);
 }
 
 iniciaPagina();
@@ -71,7 +74,7 @@ function showNav() {
 function showProfileCard() {
   gsap.timeline().to(`.contenedor-card`, {
     top: "50%",
-    duration: 2,
+    duration: 1,
     ease: "back.inOut(2)",
     onComplete: puntosGsap,
     flipProfileCard,
@@ -517,12 +520,24 @@ function showProfileAbout() {
       ease: "back.inOut(2)",
       //onComplete: none,
     });
-  let tl3 = gsap.timeline().to(".badgescard-gsap", {
-    //bottom: "-120",
-    top: top_badggescard_,
-    delay: 0.5,
-    duration: 1,
-    ease: "back.inOut(4)",
-    //onComplete: none,
-  });
+  let tl3 = gsap
+    .timeline()
+    .to(".badgescard-gsap", {
+      //bottom: "-120",
+      top: top_badggescard_,
+      delay: 0.5,
+      duration: 1,
+      ease: "back.inOut(4)",
+      //onComplete: none,
+    })
+    .to(".icon-skill", {
+      //bottom: "-120",
+      top: 0,
+      delay: 0.5,
+      duration: 0.3,
+      ease: "power1.inOut",
+      //ease: "back.inOut(1)",
+      stagger: 0.1,
+      //onComplete: none,
+    });
 }

@@ -41,8 +41,7 @@
 
 .nav-menu-1 a {
   padding: 0.3em 0;
-  //color: rgba(255, 255, 255, 0.5);
-  color: #000000;
+  color: $glb-brand-color02;
   position: relative;
   text-decoration: none;
   display: inline-block;
@@ -68,7 +67,7 @@
 }
 .nav-menu-1 a:hover,
 .nav-menu-1 .current a {
-  color: #ffffff;
+  color: $glb-brand-color01;
 }
 .nav-menu-1 a:hover:before,
 .nav-menu-1 .current a:before,
