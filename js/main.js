@@ -68,6 +68,7 @@ function showNav() {
     delay: 0.2,
     duration: 1,
     ease: "back.inOut(4)",
+    onComplete: fondoAboutGsap,
   });
 }
 
@@ -136,7 +137,6 @@ function showSegundo(reverse = false) {
         duration: 0.5,
         ease: "back.inOut(2)",
         onComplete: showNav,
-        fondoAboutGsap,
       });
   }
 }
@@ -226,12 +226,14 @@ function showQuinto(reverse = false) {
         left: "0",
         duration: 0.5,
         ease: "back.inOut(2)",
-        onComplete: showRRSS,
+        //onComplete: ,
       })
       .to(`#section-5`, {
         scale: "1",
         duration: 0.75,
         ease: "power1.inOut",
+        onComplete: showProfileAbout,
+        showRRSS,
       });
   }
 }
@@ -477,7 +479,6 @@ function fondoAboutGsap(reverse = false) {
       top: "0",
       duration: 1,
       ease: "custom",
-      onComplete: showProfileAbout,
     });
   }
 }
